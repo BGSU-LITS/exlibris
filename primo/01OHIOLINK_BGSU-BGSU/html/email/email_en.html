@@ -1,0 +1,14 @@
+<!-- https://lib.bgsu.edu/exlibris/xsl/letters/Email+Records+Letter.xsl -->
+<main>
+    <div class="indent">
+        <div translate="nui.email.institutionNote"></div>
+        <div ng-if="$ctrl.parentCtrl.fullViewLoaded" ng-repeat="item in $ctrl.parentCtrl.delayedItems">
+            <prm-brief-result-container [item]="item" display-mode="email" (load-email-template-event)="$ctrl.parentCtrl.popItem()"/>
+        </div>
+        <p ng-if="$ctrl.parentCtrl.note">
+            <strong translate="email.note"></strong>
+            {{$ctrl.parentCtrl.note}}
+        </p>
+        <div translate="nui.email.disclaimer"></div>
+    </div>
+</main>
