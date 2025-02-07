@@ -1,0 +1,69 @@
+prm-top-bar-before .bgsu-header {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+prm-top-bar-before .bgsu-header-logo,
+prm-top-bar-before .bgsu-header-unit {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+prm-top-bar-before .bgsu-header-logo {
+    padding: 0 .75rem;
+    width: 5rem;
+    height: 2.25rem
+}
+
+prm-top-bar-before .bgsu-header-unit > div {
+    display: block;
+    font: normal normal 600 1rem/1 "kepler-std-display","Century Schoolbook","New Century Schoolbook","Georgia","Palatino","Bookman",serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+prm-top-bar-before .bgsu-header-unit > div > span {
+    font-weight: 300;
+}
+
+prm-top-bar-before .bgsu-header :any-link {
+    box-shadow: none;
+    color: #000;
+}
+
+prm-top-bar-before .bgsu-header-logo > svg {
+    height: auto;
+    margin: 0;
+    padding: 0.625rem 0;
+    width: 100%;
+    vertical-align: middle;
+}
+
+@media screen {
+    prm-top-bar-before .bgsu-header {
+        background: #fd5000;
+        box-shadow: 0 .7px .7px rgba(0,0,0,.09),0 1.1px 1.2px -1.4px rgba(0,0,0,.08),0 2.5px 2.7px -2.9px rgba(0,0,0,.08);
+    }
+
+    prm-top-bar-before .bgsu-header :any-link {
+        color: #fff;
+    }
+
+    prm-top-bar-before .bgsu-header :any-link:is(:active, :focus, :hover) {
+        color: #4f2c1d;
+    }
+
+    prm-top-bar-before .bgsu-header-logo > svg {
+        fill: #fff;
+    }
+
+    prm-top-bar-before .bgsu-header-logo:is(:active, :focus, :hover) > svg {
+        fill: #4f2c1d;
+    }
+}

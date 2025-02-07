@@ -1,0 +1,131 @@
+@import 'https://use.typekit.net/aca8pmr.css';
+@import 'links.css';
+@import 'prmMainMenu.css';
+@import 'prmSearchBar.css';
+@import 'prmTopBar.css';
+@import 'prmTopBarBefore.css';
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font: normal 400 1rem/1.5 'europa', 'Avenir Next', 'Avenir', 'Helvetica', sans-serif;
+}
+
+button, input, select, textarea {
+    vertical-align: middle;
+}
+
+md-backdrop.md-opaque {
+    background-color: #999;
+}
+
+md-dialog.light-on-dark-dialog {
+    border-radius: 12px;
+}
+
+md-dialog.light-on-dark-dialog.full-cover-dialog {
+    border-radius: 0;
+}
+
+md-dialog.light-on-dark-dialog .md-button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 500px;
+}
+
+md-dialog.light-on-dark-dialog .md-button._md-focused:not([disabled]),
+md-dialog.light-on-dark-dialog .md-button.hovered:not([disabled]),
+md-dialog.light-on-dark-dialog .md-button.md-focused:not([disabled]),
+md-dialog.light-on-dark-dialog .md-button:focus:not([disabled]),
+md-dialog.light-on-dark-dialog .md-button:hover:not([disabled]) {
+    background-color: transparent;
+    color: #fff;
+    outline: 1px solid #ccc;
+}
+
+md-dialog.light-on-dark-dialog .md-button.button-confirm,
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button {
+    border-color: #FD5000;
+    color: #fff;
+}
+
+md-dialog.light-on-dark-dialog .md-button.button-confirm:focus:not([disabled]),
+md-dialog.light-on-dark-dialog .md-button.button-confirm:hover:not([disabled]),
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button:focus:not([disabled]),
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button:hover:not([disabled]) {
+    background-color: transparent;
+    box-shadow: none;
+    color: #fff;
+    outline-color: #FD5000;
+}
+
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button {
+    border-radius: 12px;
+}
+
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login [external-link] {
+    display: none;
+}
+
+md-radio-button .md-label {
+    vertical-align: top;
+}
+
+md-select-menu,
+md-select-menu md-content {
+    max-height: 336px;
+}
+
+md-toolbar.default-toolbar,
+md-toolbar.default-toolbar:not(.md-menu-toolbar),
+md-toolbar.md-primoExplore-theme.default-toolbar {
+    background-color: #e9e9e9;
+}
+
+md-toolbar .toolbar-divider,
+md-toolbar:not(.md-menu-toolbar) .toolbar-divider,
+md-toolbar.md-primoExplore-theme .toolbar-divider {
+    height: 80%;
+}
+
+.has-checkbox .list-item-count {
+    left: 13px;
+    top: 17px;
+}
+
+.md-button {
+    font: normal normal 400 1rem/1.5 'europa', 'Avenir Next', 'Avenir', 'Helvetica', sans-serif;
+    letter-spacing: normal;
+    text-transform: none;
+    vertical-align: middle;
+}
+
+.md-button .bold-text {
+    font-weight: 400 !important;
+}
+
+.md-dialog-container.fixed-container {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.tab-description.ng-inactive {
+    margin-bottom: 0;
+}
+
+.tiny-uppercase-text {
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+prm-brief-result .item-title span,
+prm-reference-entry-item .item-title {
+    color: inherit;
+}
+
+prm-opac .related-title .related-title-name,
+prm-search-result-list .results-title,
+prm-search-result-tool-bar .results-title {
+    font-style: normal;
+}

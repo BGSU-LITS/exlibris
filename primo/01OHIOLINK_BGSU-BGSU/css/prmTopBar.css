@@ -1,0 +1,69 @@
+prm-topbar {
+    height: auto;
+}
+
+prm-topbar .top-nav-bar {
+    background-color: #DDD;
+    height: 60px;
+}
+
+prm-topbar prm-logo .product-logo {
+    cursor: auto;
+    padding: 0;
+    width: 180px;
+}
+
+prm-topbar prm-logo .product-logo .organization-logo {
+    padding: 0;
+}
+
+prm-topbar prm-logo .product-logo .organization-logo:focus,
+prm-topbar prm-logo .product-logo .organization-logo:hover {
+    background-color: #fff !important;
+}
+
+prm-topbar prm-logo .product-logo .organization-logo::before {
+    content: 'Search';
+    display: block;
+    font: normal 600 2.5rem/1.5 'kepler-std-display', 'Century Schoolbook', 'New Century Schoolbook', 'Georgia', 'Palatino', 'Bookman', serif;
+    height: 60px;
+    padding: 0 .75rem;
+    text-align: left;
+    text-transform: none;
+}
+
+prm-topbar prm-logo .product-logo .organization-logo .logo-image {
+    display: none;
+}
+
+prm-topbar .md-button:not([disabled]):not(.disable-hover),
+prm-user-area-expandable .md-button.user-button .menu-arrow,
+prm-user-area-expandable .md-button .user-name {
+    color: #000;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+prm-topbar .md-button:not([disabled]):not(.disable-hover):focus,
+prm-topbar .md-button:not([disabled]):not(.disable-hover):hover,
+prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow {
+    color: #4f2c1d !important;
+}
+
+prm-topbar prm-logo .product-logo .organization-logo:focus,
+prm-topbar prm-logo .product-logo .organization-logo:hover,
+prm-topbar .md-button:not([disabled]):not(.disable-hover):focus [translate],
+prm-topbar .md-button:not([disabled]):not(.disable-hover):hover [translate] {
+    text-decoration: underline;
+    text-decoration-color: #f5c163;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+}
+
+prm-topbar prm-search-bookmark-filter #fixed-warning-message {
+    top: 6em;
+}
+
+#fixed-buttons-holder {
+    animation: none;
+}

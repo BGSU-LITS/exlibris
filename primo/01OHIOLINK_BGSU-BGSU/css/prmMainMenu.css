@@ -1,0 +1,33 @@
+prm-main-menu[menu-type=full] .settings-container .md-button,
+prm-main-menu[menu-type=full] .custom-links-container .md-button {
+    border: none;
+}
+
+prm-main-menu[menu-type=full] .md-button:not([disabled]):not(.disable-hover):focus,
+prm-main-menu[menu-type=full] .md-button:not([disabled]):not(.disable-hover):hover,
+prm-main-menu[menu-type=full] a:focus span,
+prm-main-menu[menu-type=full] a:hover span {
+    background-color: transparent !important;
+    color: #fff !important;
+    outline: none;
+}
+
+prm-main-menu[menu-type=full] .md-button .md-headline {
+    color: #fff;
+    font: normal 400 1.7rem/1 'kepler-std-display', 'Century Schoolbook', 'New Century Schoolbook', 'Georgia', 'Palatino', 'Bookman', serif;
+    text-decoration: underline;
+    text-decoration-color: #FD5000;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+prm-main-menu[menu-type=full] .md-button:focus .md-headline,
+prm-main-menu[menu-type=full] .md-button:hover .md-headline {
+    text-decoration-thickness: 2px;
+}
+
+prm-main-menu[menu-type=menu] .md-button {
+    font-size: 0.875em;
+    font-weight: 400 !important;
+    word-spacing: 12em;
+}
