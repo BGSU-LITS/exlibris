@@ -1,69 +1,110 @@
+/* Move height of prm-topbar to child element to support prm-top-bar-before. */
 prm-topbar {
     height: auto;
 }
 
-prm-topbar .top-nav-bar {
-    background-color: #DDD;
+prm-topbar > .top-nav-bar {
     height: 60px;
+}
+
+/* Always display menu, even on services page. */
+prm-topbar .isDeposit, prm-topbar .isDiscoveryServicesPage, prm-topbar .isServicePage, prm-topbar .isSummonOverAlma {
+    display: block;
+}
+
+/* Style the prm-topbar section. */
+prm-topbar {
+    background-color: #fd5000;
+}
+
+prm-topbar > .top-nav-bar {
+    background-color: transparent;
+    padding: 0 0 0 0.5rem;
+}
+
+@media screen and (min-width: 960px) {
+    prm-topbar > .top-nav-bar {
+        padding: 0 2.125rem;
+    }
+}
+
+prm-topbar prm-skip-to {
+    position: absolute;
+}
+
+prm-topbar prm-logo {
+    flex: 0 0 180px;
 }
 
 prm-topbar prm-logo .product-logo {
-    cursor: auto;
+    cursor: default;
     padding: 0;
-    width: 180px;
 }
 
 prm-topbar prm-logo .product-logo .organization-logo {
-    padding: 0;
+    padding: 0.5rem;
 }
 
-prm-topbar prm-logo .product-logo .organization-logo:focus,
-prm-topbar prm-logo .product-logo .organization-logo:hover {
-    background-color: #fff !important;
+prm-topbar prm-main-menu #more-links-button .item-content {
+    max-width: none;
 }
 
-prm-topbar prm-logo .product-logo .organization-logo::before {
-    content: 'Search';
-    display: block;
-    font: normal 600 2.5rem/1.5 'kepler-std-display', 'Century Schoolbook', 'New Century Schoolbook', 'Georgia', 'Palatino', 'Bookman', serif;
-    height: 60px;
-    padding: 0 .75rem;
-    text-align: left;
-    text-transform: none;
+prm-topbar prm-search-bookmark-filter {
+    margin: 0;
 }
 
-prm-topbar prm-logo .product-logo .organization-logo .logo-image {
-    display: none;
-}
-
-prm-topbar .md-button:not([disabled]):not(.disable-hover),
-prm-user-area-expandable .md-button.user-button .menu-arrow,
-prm-user-area-expandable .md-button .user-name {
-    color: #000;
-    font-weight: 400;
-    letter-spacing: normal;
-}
-
-prm-topbar .md-button:not([disabled]):not(.disable-hover):focus,
-prm-topbar .md-button:not([disabled]):not(.disable-hover):hover,
-prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow {
-    color: #4f2c1d !important;
-}
-
-prm-topbar prm-logo .product-logo .organization-logo:focus,
-prm-topbar prm-logo .product-logo .organization-logo:hover,
-prm-topbar .md-button:not([disabled]):not(.disable-hover):focus [translate],
-prm-topbar .md-button:not([disabled]):not(.disable-hover):hover [translate] {
-    text-decoration: underline;
-    text-decoration-color: #f5c163;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
+prm-topbar prm-search-bookmark-filter #favorites-button md-icon,
+prm-topbar prm-search-bookmark-filter #favorites-button md-icon svg {
+    transition: none;
 }
 
 prm-topbar prm-search-bookmark-filter #fixed-warning-message {
     top: 6em;
 }
 
-#fixed-buttons-holder {
-    animation: none;
+prm-topbar .md-button:not([disabled]):not(.disable-hover) {
+    color: #fff;
+    font-size: 14pt;
+    font-weight: 600;
+    letter-spacing: normal;
+}
+
+prm-topbar .md-button:not([disabled]):not(.disable-hover):focus,
+prm-topbar .md-button:not([disabled]):not(.disable-hover):hover {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    box-shadow: none;
+    color: #fff !important;
+}
+
+prm-topbar prm-user-area-expandable .button-with-menu-arrow:focus .menu-arrow,
+prm-topbar prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow,
+prm-topbar prm-user-area-expandable .button-with-menu-arrow:focus .menu-arrow:hover:not([disabled]),
+prm-topbar prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow:hover:not([disabled]) {
+    background-color: transparent;
+    color: inherit;
+}
+
+prm-topbar prm-main-menu[menu-type="menu"] .md-button,
+prm-topbar prm-user-area-expandable .md-button,
+prm-topbar prm-user-area-expandable .md-button.button-with-menu-arrow:not(.button-with-icon) {
+    padding: 0 0.75rem;
+}
+
+prm-topbar .buttons-group .md-button,
+prm-topbar .buttons-group div:first-child .md-button {
+    box-shadow: none;
+}
+
+/* Style the fixed favorites and return to top buttons. */
+prm-topbar #fixed-buttons-holder.fixed-to-top {
+    background-color: #fd5000;
+    border-radius: 20px;
+}
+
+prm-topbar #back-to-top-button,
+prm-topbar #fixed-buttons-holder.fixed-to-top #favorites-button,
+prm-topbar #fixed-buttons-holder.fixed-to-top #search-button {
+    background-color: transparent;
+    color: #fff;
+    margin: 0px;
 }
