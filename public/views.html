@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Primo Views - BGSU University Libraries</title>
+<script>(s=>{s.display='none';document.addEventListener('DOMContentLoaded',()=>s.display='block')})(document.documentElement.style)</script>
+</head>
+<body>
+<h1>Primo Views</h1>
+<table class="bgsu_common_table bgsu_common_table__small bgsu_common__full">
+    <thead>
+        <tr>
+            <th>Primo VID</th>
+            <th>Name</th>
+            <th>Default View</th>
+            <th>Slots</th>
+            <th>Customization Package</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="https://ohiolink-bgsu.primo.exlibrisgroup.com/discovery/search?vid=01OHIOLINK_BGSU:BGSU">01OHIOLINK_BGSU:BGSU</a></td>
+            <td>Baseline View</td>
+            <td>Yes</td>
+            <td><a href="#Slots_BGSU">BGSU</a></td>
+            <td><a href="primo/01OHIOLINK_BGSU-BGSU.zip">01OHIOLINK_BGSU-BGSU.zip</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://ohiolink-bgsu.primo.exlibrisgroup.com/discovery/search?vid=01OHIOLINK_BGSU:HAYES">01OHIOLINK_BGSU:HAYES</a></td>
+            <td>Hayes Presidential Library</td>
+            <td>No</td>
+            <td><a href="#Slots_HAYES">HAYES</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="https://ohiolink-bgsu.primo.exlibrisgroup.com/discovery/search?vid=01OHIOLINK_BGSU:INITIAL">01OHIOLINK_BGSU:INITIAL</a></td>
+            <td>Test View: Initial Options</td>
+            <td>No</td>
+            <td>INITIAL</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="https://ohiolink-bgsu.primo.exlibrisgroup.com/discovery/search?vid=01OHIOLINK_BGSU:KLOOR">01OHIOLINK_BGSU:KLOOR</a></td>
+            <td>Test View: Kloor Development</td>
+            <td>No</td>
+            <td>KLOOR</td>
+            <td><a href="primo/01OHIOLINK_BGSU-KLOOR.zip">01OHIOLINK_BGSU-KLOOR.zip</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Search Profile Slots</h2>
+<table class="bgsu_common_table bgsu_common_table__small bgsu_common__full">
+    <thead>
+        <tr>
+            <th>View</th>
+            <th>#</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Description/Tooltip</th>
+            <th>Search Profiles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="8" id="Slots_BGSU">BGSU</td>
+            <td>1</td>
+            <td>BGSU</td>
+            <td>BGSU Libraries</td>
+            <td>Items and resources available at BGSU</td>
+            <td><a href="#Profile_MyInst_and_CI">MyInst_and_CI</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>CDI</td>
+            <td>Articles and e-Books</td>
+            <td>Resources available online to BGSU</td>
+            <td><a href="#Profile_CentralIndex">CentralIndex</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>PCL</td>
+            <td>Browne Popular Culture Library</td>
+            <td>Items held by the Browne Popular Culture Library</td>
+            <td><a href="#Profile_SC_PCL">SC_PCL</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>CAC</td>
+            <td>Center for Archival Collections</td>
+            <td>Items held by the Center for Archival Collections</td>
+            <td><a href="#Profile_SC_CAC">SC_CAC</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>CRC</td>
+            <td>Curriculum Resource Center</td>
+            <td>Items held by the Curriculum Resource Center</td>
+            <td><a href="#Profile_SC_CRC">SC_CRC</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>MUSIC</td>
+            <td>Music Library and Bill Schurk Sound Archives</td>
+            <td>Items held by the Music Library and Bill Schurk Sound Archives</td>
+            <td><a href="#Profile_SC_MUSIC">SC_MUSIC</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Rapido</td>
+            <td>BGSU, OhioLINK and More</td>
+            <td>Resources available at BGSU, OhioLINK and other libraries</td>
+            <td><a href="#Profile_Rapido">Rapido</a></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>CourseReserves</td>
+            <td>Course Reserves</td>
+            <td>Items reserved for specific BGSU courses</td>
+            <td><a href="#Profile_CourseReserves">CourseReserves</a></td>
+        </tr>
+        <tr>
+            <td id="Slots_HAYES">HAYES</td>
+            <td>1</td>
+            <td>Hayes</td>
+            <td>Hayes Presidentail Library</td>
+            <td></td>
+            <td><a href="#Profile_Hayes">Hayes</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Search Profiles</h2>
+<table class="bgsu_common_table bgsu_common_table__small bgsu_common__full">
+    <thead>
+        <tr>
+            <th rowspan="2">Code</th>
+            <th rowspan="2">Display Name</th>
+            <th rowspan="2">Search Type</th>
+            <th rowspan="2">System</th>
+            <th colspan="7">Scopes</th>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <th><abbr title="Filter by Availability">Filter</abbr></th>
+            <th><abbr title="Exclude CDI eBooks">Exclude</abbr></th>
+            <th><abbr title="CDI Resource Types">Types</abbr></th>
+            <th><abbr title="CDI Disciplines">Discs.</abbr></th>
+            <th><abbr title="Full Text Search">FT</abbr></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="Profile_Hayes">Hayes</td>
+            <td>Hayes Presidential Library</td>
+            <td>Local Data</td>
+            <td>No</td>
+            <td><a href="#Scope_IZ_Campus_Hayes">IZ_Campus_Hayes</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="5" id="Profile_New_Discovery_Network">Rapido</td>
+            <td rowspan="5">BGSU, OhioLINK and More</td>
+            <td rowspan="5">Blended</td>
+            <td rowspan="5">No</td>
+            <td>CentralIndex</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>All</td>
+            <td>All</td>
+            <td>No (End-user selection)</td>
+        </tr>
+        <tr>
+            <td><a href="#Scope_DN_Physical">DN_Physical</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#Scope_DN_Electronic">DN_Electronic</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#Scope_IZ_Electronic">IZ_Electronic</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#Scope_IZ_Digital">IZ_Digital</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="Profile_SC_CAC">SC_CAC</td>
+            <td rowspan="2">Center for Archival Collections</td>
+            <td rowspan="2">Local Data</td>
+            <td rowspan="2">No</td>
+            <td><a href="#Scope_IZ_Library_CAC">IZ_Library_CAC</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#Scope_IZ_Offsite_CAC">IZ_Offsite_CAC</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="Profile_SC_CRC">SC_CRC</td>
+            <td rowspan="2">Curriculum Resource Center</td>
+            <td rowspan="2">Local Data</td>
+            <td rowspan="2">No</td>
+            <td><a href="#Scope_IZ_Library_CRC">IZ_Library_CRC</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#Scope_IZ_Offsite_CRC">IZ_Offsite_CRC</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="Profile_SC_MUSIC">SC_MUSIC</td>
+            <td rowspan="2">Music Library and Bill Schurk Sound Archives</td>
+            <td rowspan="2">Local Data</td>
+            <td rowspan="2">No</td>
+            <td><a href="#Scope_IZ_Library_MUSIC">IZ_Library_MUSIC</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#Scope_IZ_Offsite_MUSIC">IZ_Offsite_MUSIC</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="Profile_SC_PCL">SC_PCL</td>
+            <td rowspan="2">Browne Popular Culture Library</td>
+            <td rowspan="2">Local Data</td>
+            <td rowspan="2">No</td>
+            <td><a href="#Scope_IZ_Library_PCL">IZ_Library_PCL</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#Scope_IZ_Offsite_PCL">IZ_Offsite_PCL</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="Profile_CentralIndex">CentralIndex</td>
+            <td>Articles and more</td>
+            <td>Central Index</td>
+            <td>Yes</td>
+            <td>CentralIndex</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>All</td>
+            <td>All</td>
+            <td>No (Always)</td>
+        </tr>
+        <tr>
+            <td id="Profile_CourseReserves">CourseReserves</td>
+            <td>Course Reserves</td>
+            <td>Local Data</td>
+            <td>Yes</td>
+            <td>CourseReserves</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="Profile_MyInst_and_CI">MyInst_and_CI</td>
+            <td rowspan="2">Search everything</td>
+            <td rowspan="2">Blended</td>
+            <td rowspan="2">Yes</td>
+            <td>CentralIndex</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>All</td>
+            <td>All</td>
+            <td>No (End-user selection)</td>
+        </tr>
+        <tr>
+            <td>MyInstitution</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="Profile_DiscoveryNetwork">DiscoveryNetwork</td>
+            <td>All Libraries</td>
+            <td>Local Data</td>
+            <td>Unused</td>
+            <td>DiscoveryNetwork</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="Profile_DN_and_CI">DN_and_CI</td>
+            <td rowspan="2">Search Everything</td>
+            <td rowspan="2">Blended</td>
+            <td rowspan="2">Unused</td>
+            <td>CentralIndex</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>All</td>
+            <td>All</td>
+            <td>No (Always)</td>
+        </tr>
+        <tr>
+            <td>DiscoveryNetwork</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="Profile_MyInstitution">MyInstitution</td>
+            <td>Library Catalog</td>
+            <td>Local Data</td>
+            <td>Unused</td>
+            <td>MyInstitution</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Custom Local Data Scopes</h2>
+<table class="bgsu_common_table bgsu_common_table__small bgsu_common__full">
+    <thead>
+        <tr>
+            <th rowspan="2">Code</th>
+            <th rowspan="2">Name</th>
+            <th rowspan="2">Scope Population</th>
+            <th colspan="4">Conditions</th>
+        </tr>
+        <tr>
+            <th>Logic</th>
+            <th>Search Index</th>
+            <th>Operator</h>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="Scope_DN_Electronic">DN_Electronic</td>
+            <td>DN_Electronic</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Other Institution</td>
+            <td>Equals</td>
+            <td>01OHIOLINK_NETWORK<br>Available Electronic</td>
+        </tr>
+        <tr>
+            <td id="Scope_DN_Physical">DN_Physical</td>
+            <td>DN_Physical</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Available Physical</td>
+            <td>Exists</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="Scope_IZ_Campus_Hayes">IZ_Campus_Hayes</td>
+            <td>Hayes Presidential Library</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Physical Availability - Campus</td>
+            <td>Equals</td>
+            <td>Hayes Library</td>
+        </tr>
+        <tr>
+            <td id="Scope_IZ_Digital">IZ_Digital</td>
+            <td>IZ_Digital</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Available Digital</td>
+            <td>Exists</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="Scope_IZ_Electronic">IZ_Electronic</td>
+            <td>IZ_Electronic</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Available Electronic</td>
+            <td>Exists</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="Scope_IZ_Library_CAC">IZ_Library_CAC</td>
+            <td>Center for Archival Collections</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Physical Availability - Library</td>
+            <td>Equals</td>
+            <td>Center for Archival Collections</td>
+        </tr>
+        <tr>
+            <td id="Scope_IZ_Library_CRC">IZ_Library_CRC</td>
+            <td>Curriculum Resource Center</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Physical Availability - Library</td>
+            <td>Equals</td>
+            <td>Curriculum Resource Center</td>
+        </tr>
+        <tr>
+            <td id="Scope_IZ_Library_MUSIC">IZ_Library_MUSIC</td>
+            <td>Music Library and Bill Schurk Sound Archives</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Physical Availability - Library</td>
+            <td>Equals</td>
+            <td>Music Library</td>
+        </tr>
+        <tr>
+            <td id="Scope_IZ_Library_PCL">IZ_Library_PCL</td>
+            <td>Browned Popular Culture Library</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Physical Availability - Library</td>
+            <td>Equals</td>
+            <td>Browned Popular Culture Library</td>
+        </tr>
+        <tr>
+            <td id="Scope_IZ_Offsite_CAC">IZ_Offsite_CAC</td>
+            <td>Center for Archival Collections - Offsite</td>
+            <td>My Institution</td>
+            <td></td>
+            <td>Location</td>
+            <td>Equals</td>
+            <td>Archives - Offsite</td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="Scope_IZ_Offsite_CRC">IZ_Offsite_CRC</td>
+            <td rowspan="2">Curriculum Resource Center - Offsite</td>
+            <td rowspan="2">My Institution</td>
+            <td></td>
+            <td>Location</td>
+            <td>Equals</td>
+            <td>Curriculum - Offsite</td>
+        </tr>
+        <tr>
+            <td>Or</td>
+            <td>Location</td>
+            <td>Equals</td>
+            <td>Juvenile - Offsite</td>
+        </tr>
+        <tr>
+            <td rowspan="3" id="Scope_IZ_Offsite_MUSIC">IZ_Offsite_MUSIC</td>
+            <td rowspan="3">Music Library and Bill Schurk Sound Archives - Offsite</td>
+            <td rowspan="3">My Institution</td>
+            <td></td>
+            <td>Location</td>
+            <td>Equals</td>
+            <td>Music 78 Dummy Location</td>
+        </tr>
+        <tr>
+            <td>Or</td>
+            <td>Location</td>
+            <td>Equals</td>
+            <td>Music Closed Stacks - Offsite</td>
+        </tr>
+        <tr>
+            <td>Or</td>
+            <td>Location</td>
+            <td>Equals</td>
+            <td>Music Open Stacks - Offsite</td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="Scope_IZ_Offsite_PCL">IZ_Offsite_PCL</td>
+            <td rowspan="2">Browned Popular Culture Library - Offsite</td>
+            <td rowspan="2">My Institution</td>
+            <td></td>
+            <td>Location</td>
+            <td>Equals</td>
+            <td>Pop Culture Books - Offsite</td>
+        </tr>
+        <tr>
+            <td>Or</td>
+            <td>Location</td>
+            <td>Equals</td>
+            <td>Pop Culture Periodicals - Offsite</td>
+        </tr>
+    </tbody>
+</table>
+
+<script src="https://lib.bgsu.edu/template/2.0.0-b20/template.js"></script>
+<script src="https://lib.bgsu.edu/template/2.0.0-b20/common.js"></script>
+<script>
+bgsu_template.setup({
+    meta: true,
+    main: {
+        id: 'content',
+        top: 'top',
+    },
+    unit: {
+        thin: 'University',
+        text: 'Libraries',
+        href: 'https://www.bgsu.edu/library/',
+    },
+    help: {
+        heading: 'University Libraries',
+        text: 'Ask Us!',
+        href: 'https://www.bgsu.edu/library/ask-us/',
+    },
+});
+
+bgsu_common.setup();
+</script>
+</body>
+</html>
