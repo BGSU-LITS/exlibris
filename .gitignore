@@ -1,3 +1,4 @@
 node_modules/
+primo/*/css/*.css
 public/primo/*.zip
 .vscode/
