@@ -1,0 +1,79 @@
+prm-brief-result-container .action-list-content md-divider {
+    display: none;
+}
+
+prm-brief-result-container .badges,
+prm-brief-result-container prm-quick-link,
+prm-brief-result-container prm-search-result-availability-line > .layout-row,
+prm-brief-result-container prm-chapters-results-line {
+    padding: 0.5rem 0 0 0;
+}
+
+prm-brief-result-container .badges .badge-item .badge-icon,
+prm-brief-result-container prm-quick-link .quick-links-icons,
+prm-brief-result-container prm-search-result-availability-line [availability-type],
+prm-brief-result-container prm-chapters-results-line [chapters-type] {
+    margin: 0 4px 0 0;
+    text-align: center;
+    width: 18px;
+}
+
+prm-brief-result-container .item-detail {
+    line-height: 1.5;
+}
+
+prm-brief-result-container .item-title {
+    cursor: text;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin: 0.25rem 0;
+    max-width: 100%;
+}
+
+prm-brief-result-container .item-title,
+prm-brief-result-container .item-title span {
+    color: #1c626d;
+}
+
+prm-brief-result-container .item-title a:focus span,
+prm-brief-result-container .item-title a:hover span {
+    color: #24818F;
+}
+
+prm-brief-result-container .item-title .full-view-mouse-pointer {
+    pointer-events: none;
+    text-decoration: none;
+}
+
+prm-brief-result-container .media-content-type {
+    color: #DF3602;
+}
+
+prm-brief-result-container .result-item-text {
+    padding: 0 0 0 1rem;
+}
+
+prm-brief-result-container .search-result-availability-line-wrapper {
+    min-height: 0;
+}
+
+prm-brief-result-container prm-search-result-availability-line {
+    line-height: inherit;
+}
+
+prm-search-result-availability-line:before {
+    display: none;
+}
+
+prm-brief-result-container prm-snippet prm-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+prm-brief-result-container prm-snippet prm-icon.open-quote md-icon {
+    transform: rotate(180deg) scale(0.8) translate(2px, 2px);
+}
+
+prm-brief-result-container prm-snippet prm-highlight + prm-icon.open-quote md-icon {
+    transform: scale(0.8) translate(-2px, -2px);
+}

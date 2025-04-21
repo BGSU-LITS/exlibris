@@ -1,0 +1,251 @@
+/* Adjust spacing of full view both as popup and standalone pages. */
+prm-full-view .services-index-under {
+    left: 1.75rem;
+}
+
+prm-full-view prm-brief-result-container .list-item-primary-content {
+    padding: 1rem 1rem 0 0;
+}
+
+.__xs prm-full-view prm-brief-result-container .list-item-primary-content {
+    padding-left: 0 !important;
+}
+
+prm-full-view .full-view-section {
+    margin-top: 2rem;
+}
+
+prm-full-view .full-view-section .section-body {
+    padding: 0;
+}
+
+prm-full-view .full-view-section .section-body:has(prm-action-list) {
+    margin: -1rem 0;
+}
+
+prm-full-view .full-view-section h5.section-title {
+    line-height: 32px;
+}
+
+/* Adjust spacing on standalone pages only. */
+prm-full-view-cont > .padded-container {
+    padding: 0;
+}
+
+.__lg prm-full-view-cont prm-back-to-search-results-button .layout-row > .flex-lg-15 {
+    max-width: 10%;
+}
+
+/* View Online, Get It, and How to get it sections. */
+:is(prm-alma-viewit, prm-opac, alma-htgi-svc) .separate-list-items,
+:is(prm-opac, alma-htgi-svc) .labeled-block .links-block,
+:is(prm-opac, alma-htgi-svc) md-tab-content .tab-content-header,
+.__xs :is(prm-opac, alma-htgi-svc) md-tab-content .tab-content-header {
+    box-shadow: none;
+    margin: 0;
+    padding: 0 0 0 1rem;
+}
+
+:is(prm-alma-viewit, prm-opac, alma-htgi-svc) .separate-list-items > .separate-list-items {
+    padding: 0;
+}
+
+:is(prm-alma-viewit, prm-opac, alma-htgi-svc) .separate-list-items md-list-item,
+:is(prm-opac, alma-htgi-svc) .labeled-block .links-block .links-block-item,
+:is(prm-opac, alma-htgi-svc) md-tab-content,
+:is(prm-opac, alma-htgi-svc) md-tab-content .tab-header {
+    margin: 0;
+    padding: .5rem 0 0 0;
+}
+
+:is(prm-alma-viewit, prm-opac, alma-htgi-svc) .separate-list-items md-list-item::after {
+    background-color: transparent;
+}
+
+:is(prm-alma-viewit, prm-opac, alma-htgi-svc) .separate-list-items md-list-item:last-of-type {
+    box-shadow: none;
+}
+
+:is(prm-alma-viewit, prm-opac, alma-htgi-svc) .separate-list-items md-list-item .md-list-item-text {
+    margin: 0;
+    max-width: 100%;
+    padding: 0 1rem 0 0;
+}
+
+prm-alma-viewit .bold-text {
+    line-height: 32px;
+}
+
+prm-alma-viewit .separate-list-items prm-icon.layout-margin,
+prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
+    margin: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) .button-link .bold-text {
+    font-weight: inherit !important;
+    padding: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) .labeled-block,
+:is(prm-opac, alma-htgi-svc) .labeled-block .links-block,
+:is(prm-opac, alma-htgi-svc) .labeled-block .links-block .links-block-item {
+    display: block;
+}
+
+:is(prm-opac, alma-htgi-svc) .labeled-block .links-block .separated-block-item::after {
+    display: none;
+}
+
+:is(prm-opac, alma-htgi-svc) .labeled-block .md-button.button-as-link {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+:is(prm-opac, alma-htgi-svc) .labeled-block .md-button.button-as-link prm-icon {
+    position: absolute;
+    right: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) .md-button.filter-align {
+    margin: 3px -2px 0 0;
+    padding: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) .section-title {
+    font: inherit;
+    font-weight: 600;
+    text-transform: none;
+    top: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) .separate-list-items md-list-item .md-button.item-expand-button {
+    align-self: start;
+    border-radius: 50%;
+    height: 40px;
+    margin: 4px 6px;
+    min-width: 40px;
+    padding: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) .separate-list-items md-list-item .md-button.item-expand-button prm-icon.rotate-180 md-icon {
+    transform: rotate(180deg) translateY(4px);
+}
+
+:is(prm-opac, alma-htgi-svc) md-divider {
+    display: none;
+}
+
+:is(prm-opac, alma-htgi-svc) md-list-item.md-2-line .md-list-item-text h3,
+:is(prm-opac, alma-htgi-svc) md-list-item.md-2-line > .md-no-style .md-list-item-text h3,
+:is(prm-opac, alma-htgi-svc) md-list-item.md-3-line .md-list-item-text h3,
+:is(prm-opac, alma-htgi-svc) md-list-item.md-3-line > .md-no-style .md-list-item-text h3 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) md-list-item.md-2-line .md-list-item-text p,
+:is(prm-opac, alma-htgi-svc) md-list-item.md-2-line > .md-no-style .md-list-item-text p,
+:is(prm-opac, alma-htgi-svc) md-list-item.md-3-line .md-list-item-text p,
+:is(prm-opac, alma-htgi-svc) md-list-item.md-3-line > .md-no-style .md-list-item-text p {
+    font-weight: inherit;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) md-tab-content > div {
+    display: flex;
+    flex-direction: column;
+}
+
+:is(prm-opac, alma-htgi-svc) md-tab-content .tab-content-header .md-title {
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) md-tab-content .tab-header {
+    order: 2;
+}
+
+:is(prm-opac, alma-htgi-svc) md-tab-content .section-title > span {
+    display: block;
+    margin: 0 0 -0.25rem 0;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-location > .md-button.neutralized-button {
+    color: #000;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-location-items > .md-button {
+    margin-top: 0.5rem !important;
+    padding: 0 1rem;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-location-items .bar {
+    margin: 0.5rem 0 0 0;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-location-items .summary-brief-header {
+    min-width: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-location-items md-list-item.md-2-line .md-list-item-text > * {
+    flex: 1 1 auto;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-location-items md-list-item.md-2-line .md-list-item-text > .weak-text {
+    flex: 1 1 100%;
+    order: 3;
+}
+
+.__xs :is(prm-opac, alma-htgi-svc) prm-location-items md-list-item.md-2-line .md-list-item-text > div:last-child {
+    right: 0;
+    order: 4;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-locations > .padding-left-medium {
+    margin-right: -10px;
+    padding-left: 0;
+}
+
+prm-opac-back-button prm-icon {
+    margin: -4px;
+    order: 2;
+}
+
+alma-htgi-svc .weak-text {
+    font-size: 0.875rem;
+}
+
+alma-htgi-svc .margin-bottom-small {
+    margin-bottom: 0;
+}
+
+alma-htgi-svc .md-button.neutralized-button:focus,
+alma-htgi-svc .md-button.neutralized-button:hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+alma-htgi-svc .md-list-item-text {
+    padding-right: 0;
+}
+
+alma-htgi-svc .md-list-item-text > div {
+    padding-right: 1rem;
+}
+
+alma-htgi-svc prm-icon {
+    color: rgba(58, 58, 58, .4);
+    padding: 0;
+}
+
+alma-htgi-svc md-icon {
+    height: 12px;
+    min-height: 12px;
+    min-width: 12px;
+    width: 12px;
+}

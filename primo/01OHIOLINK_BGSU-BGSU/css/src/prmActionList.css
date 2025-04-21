@@ -1,0 +1,103 @@
+/* Standardize appearance of action buttons. */
+prm-action-list > md-nav-bar .md-nav-item {
+    width: auto;
+}
+
+prm-action-list .md-button.icon-button-with-text,
+prm-action-list > md-nav-bar .md-nav-item .md-button {
+    border-radius: 0;
+    color: #DF3602;
+    margin: 0;
+    padding: .5rem 0;
+    width: 80px;
+}
+
+prm-action-list .md-button.icon-button-with-text:focus,
+prm-action-list .md-button.icon-button-with-text:hover,
+prm-action-list > md-nav-bar .md-nav-item .md-button:focus:not([disabled]),
+prm-action-list > md-nav-bar .md-nav-item .md-button:hover:not([disabled]) {
+    background-color: #DF3602;
+    color: #fff;
+}
+
+/* Configure layout of actions and call action buttons. */
+prm-action-list .actions-layout {
+    justify-content: center;
+}
+
+prm-action-list .call-actions {
+    text-align: center;
+}
+
+prm-action-list .call-actions .call-action,
+prm-action-list #Mendeley,
+prm-action-list #EasyBib,
+prm-action-list #BibTeXPushTo,
+prm-action-list #Excel,
+prm-action-list #QR {
+    display: none;
+}
+
+prm-action-list prm-citation-after .call-action.call-action-BibTeXPushTo,
+prm-action-list prm-citation-after .call-action.call-action-EasyBib,
+prm-action-list prm-citation-after .call-action.call-action-Excel,
+prm-action-list prm-citation-after .call-action.call-action-Mendeley,
+prm-action-list prm-permalink-after .call-action.call-action-QR {
+    display: inline-block;
+}
+
+/* Show all actions when multiple items are selected. */
+#actionsList prm-action-list #Mendeley,
+#actionsList prm-action-list #EasyBib,
+#actionsList prm-action-list #Excel,
+#actionsList prm-action-list #BibTeXPushTo {
+    display: flex;
+}
+
+/* Standardize display of action content. */
+prm-action-list .send-actions-content-item {
+    padding: 1rem 0;
+}
+
+prm-action-list .send-actions-content-item > md-content,
+prm-action-list .send-actions-content-item > md-content.md-primoExplore-theme {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+prm-action-list .send-actions-content-item .form-focus {
+    border-radius: 12px;
+    box-shadow: none;
+    margin-bottom: 1rem;
+}
+
+prm-action-list .send-actions-content-item .layout-column {
+    padding: 0;
+}
+
+/* Improve layout of citations. */
+prm-action-list prm-citation .layout-row {
+    flex-direction: column;
+}
+
+prm-action-list prm-citation md-nav-bar.vertical-nav-bar {
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.__gt-sm prm-action-list prm-citation md-nav-bar.vertical-nav-bar ul {
+    flex-direction: row;
+}
+
+prm-action-list prm-citation md-nav-bar.vertical-nav-bar .md-nav-item {
+    cursor: text;
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+prm-action-list prm-citation md-nav-bar.vertical-nav-bar .md-nav-item .md-button.md-active {
+    color: #000;
+    pointer-events: none;
+    user-select: text;
+}

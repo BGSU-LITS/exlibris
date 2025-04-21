@@ -1,0 +1,68 @@
+/* Load BGSU fonts Europa and Kepler. */
+@import 'https://use.typekit.net/aca8pmr.css';
+
+/* Reset Primo Studio colors and typography. */
+@import 'studio.css';
+
+/* Reset additional uses of color not configured by Primo Studio. */
+@import 'colors.css';
+
+/* Use BGSU fonts and typography styles. */
+@import 'fonts.css';
+
+/* Use BGSU link styles. */
+@import 'links.css';
+
+/* Change style of standard components. */
+@import 'components.css';
+
+/* Fix and improve general issues. */
+@import 'fixes.css';
+
+/* [section="homepage"]: Styles the boxes on the homepage. */
+@import 'homepage.css';
+
+/* prm-top-bar-before: Includes the BGSU header from custom.js. */
+@import 'prmTopBarBefore.css';
+
+/* prm-topbar: The standard header, including the library search logo. */
+@import 'prmTopBar.css';
+
+/* md-dialog: Mostly the light-on-dark-dialog used for menus. */
+@import 'mdDialog.css';
+
+/* prm-search-bar: The primary search bar, and others. */
+@import 'prmSearchBar.css';
+
+/* prm-search: Search results, excluding the brief records. */
+@import 'prmSearch.css';
+
+/* prm-facet: Facets/filters that appear in sidebar by search results. */
+@import 'prmFacet.css';
+
+/* prm-full-view: Full view of bibliographic records. */
+@import 'prmFullView.css';
+
+/* prm-brief-result-container: Applies to all brief results. */
+@import 'prmBriefResultContainer.css';
+
+/* prm-action-list: Record actions and buttons to call actions. */
+@import 'prmActionList.css';
+
+/* prm-alma-other-members: List of items available within OhioLINK. */
+@import 'prmAlmaOtherMembers.css';
+
+/* #rapidoOffer: The Sharing section of a full record for Rapido. */
+@import 'rapidoOffer.css';
+
+/* prm-virtual-browse: Browse shelf section of full records. */
+@import 'prmVirtualBrowse.css';
+
+/* full-view-additional-info-side-bar: Sidebar with recommendations/persons. */
+@import 'fullViewAdditionalInfoSideBar.css';
+
+/* prm-page-nav-menu: Navigation menu that appears after search results. */
+@import 'prmPageNavMenu.css';
+
+/* speedDialWidget: Navigation that is used on browse pages. */
+@import 'speedDialWidget.css';

@@ -1,0 +1,163 @@
+/* Change selection background to be readible with white text. */
+::selection {
+    background: #fe871a;
+}
+
+/* Improve appearance of popup action items. */
+.focused-item-shadow.without-halo,
+prm-account .action-list-content,
+prm-favorites-tool-bar .action-list-content prm-action-list,
+prm-search-result-tool-bar .action-list-content prm-action-list,
+prm-search-result-tool-bar .action-list-content prm-export-all {
+    box-shadow: 0 0 0 .65em #fff, 0 0 0 .7em #4f2c1d, 0 2px 15px 5px rgba(0, 0, 0, .2);
+    margin: 1rem 0 !important;
+}
+
+/* Fix position of full view container anchor bracket on mobile devices. */
+.__xs .full-view-section-content:after,
+.__sm .full-view-section-content:after {
+    left: -1em;
+}
+
+/* Do not use all-uppercase text. */
+.md-button,
+.md-tab,
+.medium-uppercase-bold,
+.tiny-uppercase-text {
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* Fix aspects of neutralized buttons that were missed. */
+.md-button.neutralized-button {
+    vertical-align: baseline;
+}
+
+md-dialog md-list md-list-item .md-button:focus:not([disabled]).neutralized-button,
+md-dialog md-list md-list-item .md-button:hover:not([disabled]).neutralized-button,
+md-dialog md-list md-list-item button:focus:not([disabled]).neutralized-button,
+md-dialog md-list md-list-item button:hover:not([disabled]).neutralized-button {
+    background-color: transparent;
+}
+
+/* Realign required field markers. */
+.required-starlet,
+md-input-container.md-input-invalid:before,
+md-input-container.md-required:before {
+    left: auto;
+    right: -1rem;
+    top: -3px;
+}
+
+/* Prevent needless animation from misaligning action buttons. */
+.saved-query-list.visible .md-nav-item,
+prm-action-list.visible .md-nav-item {
+    transform: none;
+}
+
+/* Fix overflow of Search Profile Slot dropdown. */
+.search-options {
+    min-width: 0;
+}
+
+/* Do not add spacing to spaced rows. */
+.md-button.arrow-link-button .spaced-rows > .button-content,
+.spaced-rows > a,
+.spaced-rows > div,
+.spaced-rows > li,
+.spaced-rows > span {
+    margin-bottom: 0;
+}
+
+/* Make highlighted results less overwhelming. */
+.text-highlight,
+mark {
+    box-shadow: inset 0 -3px 0 0 #ffe564;
+}
+
+/* Standardize backdrop appearancce. */
+md-backdrop.md-opaque {
+    opacity: 0.85;
+    transition: none;
+}
+
+.md-dialog-container.fixed-container {
+    background-color: transparent;
+}
+
+/* Leave space for proactive chat below main content. */
+.__gt-xs md-content.main,
+.__gt-xs .full-view-inner-container {
+    min-height: calc(100vh + 16rem);
+    padding-bottom: 16rem;
+}
+
+/* Remove padding from right of main content. */
+md-content.main > .flex-0 {
+    margin-left: 0 !important;
+}
+
+/* Fix text jumping when some fields are focused. */
+md-input-container.underlined-input:not(.md-input-invalid).md-input-focused .md-input,
+md-input-container.underlined-input:not(.md-input-invalid).md-input-focused input {
+    border-width: 0 0 2px 0;
+}
+
+/* Do not lighten menu icons. */
+md-menu-item prm-icon {
+    opacity: 1;
+}
+
+/* Show more entries in Search Profile Slot dropdown. */
+md-select-menu,
+md-select-menu md-content {
+    max-height: calc(3rem * 10);
+}
+
+/* Increase visibility of unactivated switches. */
+md-switch.tiny-switch ._md-thumb,
+md-switch.tiny-switch .md-thumb {
+    border: 1px solid #ccc;
+}
+
+/* Make sure that sticky toolbar appears above content on mobile. */
+md-toolbar.default-toolbar.is-stuck {
+    z-index: 12 !important;
+}
+
+/* Make external link icon more subtle. */
+[external-link],
+prm-alma-viewit-items ._md-secondary-container {
+    color: rgba(58, 58, 58, .4);
+    margin: 0 0 0 4px;
+}
+
+[external-link] md-icon,
+prm-alma-viewit-items ._md-secondary-container md-icon {
+    height: 12px;
+    min-height: 12px;
+    min-width: 12px;
+    width: 12px;
+}
+
+/* Fix spacing around citation trail buttons. */
+prm-citation-trails-indication.margin-left-small {
+    margin: 0 1ex;
+}
+
+/* Change spinners to have BGSU colors. */
+prm-spinner .loader-text {
+    color: #4f2c1d;
+}
+
+prm-spinner.light-on-dark .diamond {
+    background-color: white;
+}
+
+prm-spinner.dark-on-light .diamond {
+    background-color: #4f2c1d;
+}
+
+prm-spinner.half-transparent .diamond {
+    background-color: #fd5000;
+}

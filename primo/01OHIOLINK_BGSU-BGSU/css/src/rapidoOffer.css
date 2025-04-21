@@ -1,0 +1,154 @@
+#rapidoOffer prm-service-ngrs .alert-bar,
+#rapidoOffer prm-service-ngrs .main-tile {
+    margin-top: 0;
+}
+
+#rapidoOffer prm-service-ngrs .grid-for-one-offer,
+#rapidoOffer prm-service-ngrs .grid-for-two-offers {
+    box-shadow: none;
+    width: 100%;
+}
+
+#rapidoOffer prm-service-ngrs .or-separator .line {
+    bottom: 0;
+    top: 0;
+}
+
+#rapidoOffer prm-service-ngrs .or-separator .or .word {
+    background-color: #fff;
+    font: inherit;
+    font-weight: 600;
+}
+
+#rapidoOffer prm-service-physical-best-offer .bold_text {
+    font-weight: 600;
+}
+
+#rapidoOffer prm-service-physical-best-offer .centered-text {
+    padding: 0;
+    font-style: italic;
+    font-size: inherit;
+}
+
+#rapidoOffer prm-service-physical-best-offer .delivered_in,
+#rapidoOffer prm-service-physical-best-offer .first_line,
+#rapidoOffer prm-service-physical-best-offer .first_line_rota,
+#rapidoOffer prm-service-physical-best-offer .keep_for,
+#rapidoOffer prm-service-physical-best-offer .last_line,
+#rapidoOffer prm-service-physical-best-offer .more_pickup_locations,
+#rapidoOffer prm-service-physical-best-offer .patron_cost,
+#rapidoOffer prm-service-physical-best-offer .pickupAnywhereTile,
+#rapidoOffer prm-service-physical-best-offer .rota_line {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+#rapidoOffer prm-service-physical-best-offer .get_it_btn,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_physical {
+    border-radius: 0;
+    line-height: 1.5;
+    margin: 0.5rem 0 0 0;
+    min-height: auto;
+    padding: 0;
+    width: auto;
+}
+
+#rapidoOffer prm-service-physical-best-offer .icon-wrapper,
+#rapidoOffer prm-service-physical-best-offer .offer_details-wrapper {
+    width: auto;
+    margin: 0 1rem 0 0;
+}
+
+#rapidoOffer prm-service-physical-best-offer .offer_details-wrapper .offer_details {
+    display: block;
+    margin-right: 0;
+}
+
+#rapidoOffer prm-service-physical-best-offer .main_tiles {
+    background-color: transparent;
+    justify-content: flex-start;
+}
+
+#rapidoOffer prm-service-physical-best-offer .min-tile-height {
+    min-height: auto;
+}
+
+#rapidoOffer prm-service-physical-best-offer .ngrs-delivery-box-tile {
+    color: #4f2c1d !important;
+    filter: none;
+}
+
+#rapidoOffer prm-service-physical-best-offer .ngrs-delivery-box-tile > circle {
+    fill: #E1D8CD;
+}
+
+#rapidoOffer prm-rapido-no-offer-message .main_tile {
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 0;
+    min-height: 0;
+    padding: 0;
+}
+
+#rapidoOffer prm-rapido-no-offer-message #no_offer_message_out_text_notClickable,
+#rapidoOffer prm-rapido-no-offer-message #no_offer_message_out_text_part1 {
+    color: inherit;
+    font: inherit;
+}
+
+#rapidoOffer prm-get-it-request .main_tile_request_form {
+    border-radius: 1rem;
+    box-shadow: none;
+    margin-top: 0;
+}
+
+#rapidoOffer prm-get-it-request .offer_details_main_tail {
+    background-color: #fff;
+    border-left: 1px solid #c3c3c3;
+    border-radius: 0 1rem 1rem 0;
+}
+
+#rapidoOffer prm-get-it-request .close,
+#rapidoOffer prm-get-it-request .close_s {
+    border-radius: 0;
+    color: #4f2c1d;
+    font: inherit;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 0.5rem;
+    min-height: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+#rapidoOffer prm-get-it-request .close:after,
+#rapidoOffer prm-get-it-request .close_s:after {
+    content: '×';
+
+    visibility: visible;
+}
+
+#rapidoOffer prm-get-it-request .form_title {
+    color: inherit;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.__xs #rapidoOffer prm-get-it-request .margin-buttons {
+    flex-direction: column;
+}
+
+#rapidoOffer prm-get-it-request .offer_detail {
+    background-color: inherit;
+    border: none;
+    color: inherit;
+}
+
+/* Hide sharing section if there is no sharing available. */
+#rapidoOffer:has(prm-rapido-no-offer-message) {
+    display: none;
+}

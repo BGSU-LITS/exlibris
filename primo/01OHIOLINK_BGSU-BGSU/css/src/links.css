@@ -1,0 +1,169 @@
+/* Display children of some links as inline-block to control underlines. */
+.md-button.arrow-link-button .button-content,
+.arrow-link prm-highlight {
+    display: inline-block;
+}
+
+/* Reset box-shadow, color and padding of most links. */
+.md-button.arrow-link-button .button-content, a,
+.md-button.button-as-link,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_physical
+{
+    background-color: transparent;
+    box-shadow: none;
+    color: #df3602;
+}
+
+.md-button.arrow-link-button .button-content, a {
+    padding: 0;
+}
+
+/* Add underlines to most links. */
+.arrow-link prm-highlight,
+.md-button.arrow-link-button .button-content, a,
+.md-button.button-as-link span, .md-button.button-as-link b,
+.tiny-switch .md-label,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_physical,
+prm-recomendations prm-recomendation-item .recommendations-title,
+prm-linked-data md-card md-card-header md-card-header-text h3 .md-button.neutralized-button
+{
+    text-decoration: underline;
+    text-decoration-color: #f5c163;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+/* Reset box-shadow and color of most links on focus and hover. */
+.md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content, .md-button.arrow-link-button:focus .button-content, .md-button.arrow-link-button:hover .button-content, .recommendations-title.hover>span>span, .recommendations-title:hover>span>span, a.hover, a:focus, a:hover, prm-chapters-and-reviews prm-chapters-and-reviews-item md-card>.md-button:focus .item-title span, prm-chapters-and-reviews prm-chapters-and-reviews-item md-card>.md-button:hover .item-title span, prm-citation-trails-item.active-item md-card>.md-button:focus .item-title span, prm-citation-trails-item.active-item md-card>.md-button:hover .item-title span, prm-tags-list .md-chips .md-chip .md-chip-content:hover strong, prm-tags-list .md-chips md-chip .md-chip-content:hover strong, prm-tags-list md-chips .md-chip .md-chip-content:hover strong, prm-tags-list md-chips md-chip .md-chip-content:hover strong,
+.md-button.button-as-link:focus:not([disabled]), .md-button.button-as-link:hover:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn:focus:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn:hover:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:focus:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:hover:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_physical:focus:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_physical:hover:not([disabled]),
+.md-button.arrow-link-button alma-howovp .neutralized-button:focus .button-content,
+.md-button.arrow-link-button alma-howovp .neutralized-button:hover .button-content,
+alma-howovp .neutralized-button:focus .md-button.arrow-link-button .button-content,
+alma-howovp .neutralized-button:focus a,
+alma-howovp .neutralized-button:focus a:hover,
+alma-howovp .neutralized-button:hover .md-button.arrow-link-button .button-content,
+alma-howovp .neutralized-button:hover a,
+alma-howovp .neutralized-button:hover a:hover
+{
+    background-color: transparent;
+    box-shadow: none;
+    color: #C25700;
+}
+
+/* Increase size of underline on most links on focus and hover. */
+.md-button.arrow-link-button .button-content:focus, .md-button.arrow-link-button .button-content:hover, .md-button.arrow-link-button .hover.button-content, .md-button.arrow-link-button:focus .button-content, .md-button.arrow-link-button:hover .button-content, .recommendations-title.hover>span>span, .recommendations-title:hover>span>span, a.hover, a:focus, a:hover, prm-chapters-and-reviews prm-chapters-and-reviews-item md-card>.md-button:focus .item-title span, prm-chapters-and-reviews prm-chapters-and-reviews-item md-card>.md-button:hover .item-title span, prm-citation-trails-item.active-item md-card>.md-button:focus .item-title span, prm-citation-trails-item.active-item md-card>.md-button:hover .item-title span, prm-tags-list .md-chips .md-chip .md-chip-content:hover strong, prm-tags-list .md-chips md-chip .md-chip-content:hover strong, prm-tags-list md-chips .md-chip .md-chip-content:hover strong, prm-tags-list md-chips md-chip .md-chip-content:hover strong,
+.arrow-link:focus prm-highlight, .arrow-link:hover prm-highlight,
+.md-button.button-as-link:focus:not([disabled]) span, .md-button.button-as-link:hover:not([disabled]) span, .md-button.button-as-link:focus:not([disabled]) b, .md-button.button-as-link:hover:not([disabled]) b,
+.tiny-switch:focus .md-label, .tiny-switch:hover .md-label,
+#rapidoOffer prm-service-physical-best-offer .get_it_btn:focus:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn:hover:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:focus:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_digital:hover:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_physical:focus:not([disabled]),
+#rapidoOffer prm-service-physical-best-offer .get_it_btn_physical:hover:not([disabled]),
+prm-recomendations prm-recomendation-item a:focus .recommendations-title,
+prm-recomendations prm-recomendation-item a:hover .recommendations-title,
+prm-linked-data md-card md-card-header md-card-header-text h3 .md-button.neutralized-button:focus,
+prm-linked-data md-card md-card-header md-card-header-text h3 .md-button.neutralized-button:hover,
+.md-button.arrow-link-button alma-howovp .neutralized-button:focus .button-content,
+.md-button.arrow-link-button alma-howovp .neutralized-button:hover .button-content,
+alma-howovp .neutralized-button:focus .md-button.arrow-link-button .button-content,
+alma-howovp .neutralized-button:focus a,
+alma-howovp .neutralized-button:hover .md-button.arrow-link-button .button-content,
+alma-howovp .neutralized-button:hover a
+{
+    text-decoration-thickness: 2px;
+}
+
+/* Override important color of action buttons. */
+.result-item-actions .md-icon-button:focus:not([disabled]),
+.result-item-actions .md-icon-button:hover:not([disabled]) {
+    color: #C25700 !important;
+}
+
+/* Fix appearance of quick links in brief and full results. */
+.md-button.arrow-link-button prm-quick-link .button-content,
+prm-quick-link .md-button.arrow-link-button .button-content,
+prm-quick-link a {
+    margin: 0 1.75rem 0 0;
+}
+
+.md-button.arrow-link-button prm-quick-link .button-content span,
+prm-quick-link .md-button.arrow-link-button .button-content span,
+prm-quick-link a span {
+    margin: 0;
+}
+
+.md-button.arrow-link-button prm-quick-link .button-content .quick-link-type,
+prm-quick-link .md-button.arrow-link-button .button-content .quick-link-type,
+prm-quick-link a .quick-link-type,
+.md-button.arrow-link-button prm-quick-link .button-content [link-arrow],
+prm-quick-link .md-button.arrow-link-button .button-content [link-arrow],
+prm-quick-link a [link-arrow] {
+    color: #DF3602;
+    margin: 0;
+}
+
+prm-quick-link .quick-links-icons {
+    color: rgba(58, 58, 58, .4);
+    opacity: 1;
+}
+
+/* Show Available Online as a button in brief and full results. */
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) {
+    position: absolute;
+    bottom: 0;
+}
+
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) .md-button.neutralized-button,
+prm-full-view-service-container .md-button.button-as-link:has(span[data-qa="AlmaRequest"], span[data-qa="AlmaItemRequest"]) {
+    background-color: #1c626d;
+    border-radius: 1.5rem;
+    color: #fff;
+    line-height: 2.5;
+    margin: 0;
+    padding: 0 1rem;
+    width: auto;
+}
+
+prm-full-view-service-container .md-button.button-as-link:has(span[data-qa="AlmaRequest"]) {
+    margin-left: -1rem;
+}
+
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) .md-button.neutralized-button:focus,
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) .md-button.neutralized-button:hover,
+prm-full-view-service-container .md-button.button-as-link:has(span[data-qa="AlmaRequest"],span[data-qa="AlmaItemRequest"]):focus:not([disabled]),
+prm-full-view-service-container .md-button.button-as-link:has(span[data-qa="AlmaRequest"],span[data-qa="AlmaItemRequest"]):hover:not([disabled]) {
+    background-color: #24818F;
+    color: #fff;
+}
+
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) .md-button.neutralized-button .button-content,
+prm-full-view-service-container .md-button.button-as-link:has(span[data-qa="AlmaRequest"], span[data-qa="AlmaItemRequest"]) span {
+    color: #fff;
+    text-decoration: none;
+}
+
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) .md-button.neutralized-button .button-content .availability-status {
+    color: inherit !important;
+}
+
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) [availability-type],
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) [external-link],
+prm-search-result-availability-line > div:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) .arrow-link-button [link-arrow] {
+    display: none;
+}
+
+prm-brief-result-container .list-item-primary-content.layout-row:has(.ext_not_restricted, .fulltext, .fulltext_linktorsrc, .fulltext_linktorsrc_newspaper, .fulltext_linktorsrc_topic, .fulltext_multiple, .fulltext_newspaper, .fulltext_topic, .not_restricted) {
+    padding-bottom: 3rem;
+}

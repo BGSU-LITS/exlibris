@@ -1,0 +1,116 @@
+.__gt-sm prm-full-view .full-view-additional-info-side-bar {
+    padding: 1.5rem 1rem 0 0;
+}
+
+.__sm prm-full-view .full-view-additional-info-side-bar,
+.__xs prm-full-view .full-view-additional-info-side-bar {
+    background-color: transparent;
+    padding: 1.5rem;
+}
+
+.__sm prm-full-view .recommendations-wrapper,
+.__xs prm-full-view .recommendations-wrapper {
+    padding-top: 0;
+}
+
+/*
+prm-recomendations {
+    display: block;
+    margin-right: 1rem;
+}
+*/
+
+prm-recomendations .md-button {
+    display: block;
+    margin: 0 auto;
+}
+
+prm-recomendations .recommendations-wrapper .section-head,
+prm-linked-data {
+    margin: 0 1rem 0.5rem 1rem;
+}
+
+prm-recomendations .recommendations-wrapper .section-title,
+prm-linked-data .section-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+}
+
+prm-recomendations .recommendations-wrapper .section-description {
+    margin: 0;
+}
+
+prm-recomendations prm-recomendation-item {
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+}
+
+prm-recomendations prm-recomendation-item a.a-tag-as-wrapper {
+    text-decoration: none;
+}
+
+prm-recomendations prm-recomendation-item .media-figure {
+    margin: 0 0 0 1rem;
+    order: 2;
+}
+
+prm-recomendations prm-recomendation-item .recommendations-title,
+prm-linked-data md-card md-card-header md-card-header-text h3 .md-button {
+    color: #1c626d;
+    margin: 0;
+}
+
+prm-recomendations prm-recomendation-item .recommendations-title.hover > span > span,
+prm-recomendations prm-recomendation-item a:focus .recommendations-title,
+prm-recomendations prm-recomendation-item a:hover .recommendations-title,
+prm-linked-data md-card md-card-header md-card-header-text h3 .md-button:focus,
+prm-linked-data md-card md-card-header md-card-header-text h3 .md-button:hover {
+    color: #24818F;
+}
+
+prm-recomendations prm-recomendation-item .recommendations-title prm-icon {
+    opacity: 1;
+    right: 0;
+    top: 0;
+}
+
+prm-recomendations prm-recomendation-item .weak-text {
+    color: #3a3a3a;
+}
+
+prm-recomendations prm-recomendation-item .weak-text .tiny-uppercase-text {
+    font-size: 0.95rem;
+    font-weight: inherit;
+}
+
+prm-recomendations prm-recomendation-item .weak-text img {
+    margin-left: 0.25rem;
+}
+
+prm-linked-data md-card._md.wrapper {
+    border-radius: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+prm-linked-data .md-button.button-link .bold-text {
+    font-weight: inherit !important;
+    padding: 0 0.25rem;
+}
+
+prm-linked-data .person-name-btn:focus span,
+prm-linked-data .person-name-btn:hover span {
+    box-shadow: none;
+}
+
+prm-linked-data md-card md-card-header md-card-header-text .md-subhead {
+    font: inherit;
+    letter-spacing: 0;
+}
+
+prm-linked-data md-card .person-data-grid-cont {
+    font-size: 0.875rem;
+    margin: 0;
+}

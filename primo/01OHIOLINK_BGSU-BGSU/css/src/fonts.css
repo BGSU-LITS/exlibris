@@ -1,0 +1,27 @@
+/* Use 16px Europa for most text. */
+html {
+    font-size: 16px;
+}
+
+body {
+    font: normal 400 1rem/1.5 'europa', 'Avenir Next', 'Avenir', 'Helvetica', sans-serif;
+}
+
+/* Chips are 15px. */
+.md-chips {
+    font-family: inherit;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+}
+
+/* Use 24px Kepler for some headings. */
+h2,
+h2.md-headline {
+    font: normal 400 1.5rem/1 "kepler-std-display", "Century Schoolbook", "New Century Schoolbook", "Georgia", "Palatino", "Bookman", serif;
+}
+
+/* Use 32px Kepler for menu headings. */
+md-dialog.light-on-dark-dialog .md-button .md-headline,
+md-dialog.light-on-dark-dialog .overlay-menu-item .md-headline {
+    font: normal 400 2rem/1 "kepler-std-display", "Century Schoolbook", "New Century Schoolbook", "Georgia", "Palatino", "Bookman", serif;
+}

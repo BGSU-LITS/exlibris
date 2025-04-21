@@ -1,0 +1,76 @@
+/* Style the Links Menu overflow, Log In menu and QR Code/Copy Link popup. */
+md-dialog.light-on-dark-dialog {
+    background-color: #4f2c1d;
+    border: none;
+    border-radius: 0.75rem;
+}
+
+md-dialog.light-on-dark-dialog.full-cover-dialog {
+    border-radius: 0;
+}
+
+/* Adjust layout of Links Menu overflow. */
+md-dialog.light-on-dark-dialog .md-button .md-headline,
+md-dialog.light-on-dark-dialog .overlay-menu-item .md-headline {
+    color: inherit;
+}
+
+md-dialog.light-on-dark-dialog .settings-container md-menu-item {
+    height: auto;
+    min-height: 0;
+}
+
+md-dialog.light-on-dark-dialog .settings-container .md-button {
+    border-radius: 1.5rem;
+    margin: 0 0 0.25rem 0 !important;
+    padding: 0 0.75rem;
+}
+
+md-dialog.light-on-dark-dialog .settings-container .md-button prm-icon {
+    opacity: 1;
+    margin-right: 0;
+    text-align: left;
+    width: 28px;
+}
+
+.__xs md-dialog.light-on-dark-dialog .custom-links-container .main-menu-button {
+    margin-left: 0 !important;
+}
+
+md-dialog.light-on-dark-dialog .custom-links-container .main-menu-button .transparent-card {
+    border-radius: 0.75rem;
+    margin: 0 0 0.25rem 0.25rem;
+    padding: 0.75rem;
+}
+
+/* Make focus and hover styles of login dialog unique. */
+md-dialog.light-on-dark-dialog md-dialog-content .disable-hover .md-button:hover:not(:focus),
+md-dialog.light-on-dark-dialog md-dialog-content .disable-hover button:hover:not(:focus) {
+    box-shadow: none;
+}
+
+md-dialog.light-on-dark-dialog .md-list[class$=-line] md-list-item.list-login .md-button,
+md-dialog.light-on-dark-dialog .md-list md-list-item.list-login .md-button,
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button {
+    color: #fff;
+}
+
+md-dialog.light-on-dark-dialog .md-list[class$=-line] md-list-item.list-login .md-button:hover:not([disabled]),
+md-dialog.light-on-dark-dialog .md-list md-list-item.list-login .md-button:hover:not([disabled]),
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button:hover:not([disabled]) {
+    color: #f5c163;
+}
+
+/* Hide external link icon for SAML login. */
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login [external-link] {
+    display: none;
+}
+
+/* Fix too small and thin text. */
+md-dialog.light-on-dark-dialog .user-menu-header span {
+    font-size: inherit !important;
+}
+
+md-dialog.light-on-dark-dialog .tiny-uppercase-text {
+    font-weight: 600;
+}

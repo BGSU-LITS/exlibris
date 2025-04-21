@@ -1,0 +1,55 @@
+prm-alma-other-members .bold {
+    font-size: inherit;
+    font-weight: 600;
+}
+
+prm-alma-other-members .md-button,
+prm-alma-other-members .md-button._md-focused:not([disabled]),
+prm-alma-other-members .md-button.hovered:not([disabled]),
+prm-alma-other-members .md-button.md-focused:not([disabled]),
+prm-alma-other-members .md-button:focus:not([disabled]),
+prm-alma-other-members .md-button:hover:not([disabled]) {
+    background-color: transparent;
+    color: #000;
+}
+
+prm-alma-other-members .md-button.item-expand-button,
+prm-alma-other-members .md-button.md-icon-button {
+    color: #4f2c1d;
+}
+
+prm-alma-other-members .md-button.item-expand-button:focus:not([disabled]),
+prm-alma-other-members .md-button.item-expand-button:hover:not([disabled]),
+prm-alma-other-members .md-button.md-icon-button:focus:not([disabled]),
+prm-alma-other-members .md-button.md-icon-button:hover:not([disabled]) {
+    background-color: #4f2c1d;
+    color: #fff;
+}
+
+prm-alma-other-members .md-button.section-title {
+    border-radius: 0;
+    padding: 0.5rem 0 0 0;
+}
+
+prm-alma-other-members .md-button br {
+    display: none;
+}
+
+prm-alma-other-members .md-button prm-icon {
+    color: inherit;
+}
+
+prm-alma-other-members md-list {
+    padding: 0;
+}
+
+prm-alma-other-members md-list-item.md-2-line,
+prm-alma-other-members md-list-item.md-2-line > .md-no-style {
+    padding-top: 0.5rem;
+    min-height: 0;
+}
+
+/* Hide the Register button under other institutions. */
+prm-alma-other-members .md-button:has(span[translate="nui.fulldisplay.otherLocations.register"]) {
+    display: none;
+}

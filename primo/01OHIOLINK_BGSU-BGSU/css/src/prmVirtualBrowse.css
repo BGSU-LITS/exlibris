@@ -1,0 +1,19 @@
+prm-virtual-browse .md-virtual-repeat-container {
+    background-color: #E1D8CD;
+    border: 1px solid #b99b80;
+    border-radius: 0.75rem;
+}
+
+prm-virtual-browse .container-nav-controls .nav-control md-icon {
+    border-radius: 12px;
+}
+
+prm-virtual-browse .container-nav-controls .nav-control:focus:not([disabled]),
+prm-virtual-browse .container-nav-controls .nav-control:hover:not([disabled]) {
+    background-color: transparent;
+}
+
+prm-virtual-browse .container-nav-controls .nav-control:focus:not([disabled]) md-icon,
+prm-virtual-browse .container-nav-controls .nav-control:hover:not([disabled]) md-icon {
+    background-color: #4f2c1d;
+}

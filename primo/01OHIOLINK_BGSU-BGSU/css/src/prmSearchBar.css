@@ -1,0 +1,527 @@
+/* Use dark text for when the background changes to white. */
+prm-atoz-search-bar,
+prm-authority-search-bar,
+prm-browse-search-bar,
+prm-newspapers-search-bar,
+prm-search-bar,
+prm-tags-search-bar {
+    color: #000;
+}
+
+/* Do not change backdrop of search area when advanced search is shown. */
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .advanced-search-backdrop.visible {
+    display: none;
+}
+
+/* Make the search bar full width and standardize appearance. */
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-wrapper .search-elements-wrapper {
+    max-width: 100%;
+    min-height: 0;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .flex-0 {
+    display: none;
+}
+
+/* Fix widths of Journal Finder search bar, and make label bold. */
+prm-atoz-search-bar .journal-search-tile {
+    font-weight: 600;
+    width: auto;
+}
+
+prm-atoz-search-bar .layout-row .layout-column {
+    max-width: 100%;
+}
+
+/* Override inline styles used in Newspapers search bar. */
+prm-newspapers-search-bar .bold-text {
+    font-size: inherit !important;
+    text-transform: none !important;
+    letter-spacing: inherit !important;
+}
+
+/* Allow automatic widths in Newspaper search bar on small screens. */
+.__xs prm-newspapers-search-bar .search-options,
+.__xs prm-newspapers-search-bar .search-scope {
+    width: auto;
+}
+
+/* Style search buttons. */
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+)
+:is(
+    .search-actions .md-button,
+    .classic-input .md-button
+) {
+    border-radius: 0;
+    min-height: 60px;
+    padding: 0 6px;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+)
+:is(
+    .search-actions .md-button.button-confirm,
+    .classic-input .md-button.submit-button
+) {
+    color: #fd5000;
+    padding: 0 0.75rem 0 0.5rem;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+)
+:is(
+    .search-actions .md-button.button-confirm:not([disabled]):focus,
+    .search-actions .md-button.button-confirm:not([disabled]):hover,
+    .classic-input .md-button.submit-button:not([disabled]):focus,
+    .classic-input .md-button.submit-button:not([disabled]):hover
+) {
+    color: #fff;
+    background-color: #fd5000;
+}
+
+/* Fix style of Advanced/Simple search buttons. */
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .advanced-search-wrapper .md-button.switch-to-simple {
+    top: 4px;
+    right: 4px;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-switch-buttons {
+    margin: 0;
+}
+
+.__gt-xs :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-switch-buttons {
+    padding-left: 0.75rem;
+    padding-top: 0.75rem;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-switch-buttons :is(
+    .md-button.switch-to-advanced,
+    .md-button.switch-to-simple
+) {
+    color: #fff;
+    min-width: 130px;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-switch-buttons :is(
+    .md-button.switch-to-advanced,
+    .md-button.switch-to-simple
+):is(
+    ._md-focused:not([disabled]),
+    .hovered:not([disabled]),
+    .md-focused:not([disabled]),
+    :focus:not([disabled]):focus:not([disabled]),
+    :hover:not([disabled]):hover:not([disabled])
+) {
+    background-color: #fff;
+    color: #4f2c1d;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-switch-buttons .layout-row {
+    justify-content: center;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .simple-search-wrapper .search-options::after {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .simple-search-wrapper .search-options md-divider {
+    margin: 0 0.25rem;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .simple-search-wrapper .search-options md-input-container {
+    min-width: 0;
+}
+
+/* Make adjustments for tablets and larger devices. */
+.__gt-xs :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) {
+    padding: 1rem;
+}
+
+.__gt-xs :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+)
+:is(
+    #searchBar,
+    .classic-input,
+    .search-element-inner,
+    .simple-search-wrapper
+) {
+    border-radius: 30px;
+    box-shadow: none;
+    outline: none;
+}
+
+.__gt-xs :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) #searchBar {
+    padding-left: 1.75rem;
+}
+
+.__gt-xs :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+)
+:is(
+    .search-actions .md-button.button-confirm,
+    .classic-input .md-button.submit-button
+) {
+    border-radius: 0 30px 30px 0;
+}
+
+/* Set the backdrop behind the advanced search to smallest full height. */
+.__gt-xs :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .advanced-mode {
+    min-height: 809px;
+}
+
+.__gt-sm :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .advanced-mode {
+    min-height: 624px;
+}
+
+.__gt-md :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .advanced-mode {
+    min-height: 584px;
+}
+
+.__gt-lg :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .advanced-mode {
+    min-height: 545px;
+}
+
+/* Reposition the autocomplete dropdown for search box rounded ends. */
+body:has(.__gt-xs) #prm-simple-search {
+    margin-left: 2rem;
+}
+
+/* Make adjustments for desktop devices. */
+.__gt-sm :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+ ) {
+    padding: 1.5rem calc(2.625rem + 156px);
+}
+
+.__gt-sm prm-search-bar {
+    padding-right: 2.625rem;
+}
+
+.__gt-sm :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-switch-buttons :is(
+    .md-button.switch-to-advanced,
+    .md-button.switch-to-simple
+) {
+    min-width: 9rem;
+}
+
+/* Put organization logo over search bar when it exists. */
+.__gt-sm:has(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) prm-topbar prm-logo .product-logo .organization-logo {
+    position: relative;
+    top: 5.25rem;
+}
+
+/* Style the advanced search form. */
+prm-advanced-search fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+prm-advanced-search legend {
+    transform: none;
+}
+
+prm-advanced-search .advanced-search-output .search-string .string-field.tiny-bold.uppercase {
+    font-size: inherit;
+}
+
+prm-advanced-search .search-element .advanced-search-output md-card {
+    padding: 0.75rem 1.5rem;
+}
+
+prm-advanced-search .advanced-search-tabs md-input-container {
+    margin: 1.5rem 0;
+    padding: 0 2px;
+}
+
+prm-search-bar .advanced-search-wrapper .inputs-row > md-input-container {
+    margin: 0 .5rem 1rem 0;
+}
+
+prm-advanced-search .advanced-search-tabs .advanced-drop-downs {
+    padding-top: 0.75rem;
+}
+
+prm-advanced-search .collapsed-button {
+    color: #4f2c1d;
+    margin-top: -4px;
+    padding: 0 6px;
+}
+
+prm-advanced-search .collapsed-button md-icon {
+    vertical-align: text-top;
+}
+
+prm-advanced-search .form-focus {
+    border: none;
+    box-shadow: none;
+}
+
+prm-advanced-search .input-complex-rows {
+    vertical-align: middle;
+}
+
+prm-advanced-search .md-button.button-confirm {
+    color: #fd5000;
+    font-weight: 600;
+}
+
+prm-advanced-search .md-button.button-confirm:is(:focus, :hover):not([disabled]) {
+    background-color: #fd5000;
+    color: #fff;
+}
+
+prm-advanced-search .search-element .padded-container {
+    padding: 0.75rem 1.5rem;
+}
+
+prm-advanced-search .search-element .padded-container md-divider {
+    display: none;
+}
+
+
+prm-advanced-search .search-string .string-block span {
+    display: inline-block;
+    float: none;
+}
+
+prm-advanced-search .tab-description {
+    margin: 0;
+}
+
+/* Round corners and label details button on tablet and larger devices. */
+.__gt-xs prm-advanced-search md-tab-content {
+    border-radius: 0 0 30px 30px;
+}
+
+.__gt-xs prm-advanced-search .collapsed-button {
+    right: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+.__gt-xs prm-advanced-search .collapsed-button::before {
+    content: 'Show Details';
+}
+
+.__gt-xs prm-advanced-search .collapsed-button[aria-expanded="true"]::before {
+    content: 'Hide Details';
+}
+
+.__gt-xs prm-advanced-search .form-focus {
+    border-radius: 30px;
+}
+
+/* Force the radio buttons for search profiles onto a new line. */
+prm-advanced-search #searchFieldsGroupAdvancedSearch {
+    width: 100%;
+}
+
+/* Show Search Profile Slot when Advanced Search is collapsed. */
+prm-advanced-search .shrink-content {
+    max-height: 3rem;
+}
+
+prm-advanced-search .shrink-content:not(.shrink-content-add) .layout-wrap {
+    flex-wrap: nowrap;
+}
+
+prm-advanced-search .shrink-content:not(.shrink-content-add) md-radio-group.layout-row md-radio-button {
+    cursor: default;
+    padding: 0;
+}
+
+prm-advanced-search .shrink-content:not(.shrink-content-add) :is(
+    #searchFieldsGroupAdvancedSearch,
+    md-radio-group.layout-row .md-label
+) {
+    margin: 0 1ex 0 0;
+    text-wrap: nowrap;
+    width: auto;
+}
+
+prm-advanced-search .shrink-content:not(.shrink-content-add) :is(
+    md-radio-button[aria-checked=false],
+    md-radio-button .md-container
+) {
+    display: none;
+}
+
+/* Prevent animations for form elements. */
+prm-advanced-search .animate-input.ng-enter,
+prm-advanced-search .animate-scale.ng-enter {
+    transition-duration: 0s;
+}

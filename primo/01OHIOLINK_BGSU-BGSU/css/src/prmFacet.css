@@ -1,0 +1,120 @@
+prm-facet .available-facets .section-content .md-chips .md-chip .button-exclude._md-focused:not([disabled]),
+prm-facet .available-facets .section-content .md-chips .md-chip .button-exclude.hovered:not([disabled]),
+prm-facet .available-facets .section-content .md-chips .md-chip .button-exclude.md-focused:not([disabled]),
+prm-facet .available-facets .section-content .md-chips .md-chip .button-exclude:focus:not([disabled]),
+prm-facet .available-facets .section-content .md-chips .md-chip .button-exclude:hover:not([disabled]) {
+    color: #e02200;
+}
+
+prm-facet .facet-counter {
+    font-style: normal;
+}
+
+prm-facet .filtered-facets-section,
+prm-facet .sidebar-inner-wrapper .compensate-padding-left {
+    padding: 0;
+}
+
+prm-facet .link-as-facet,
+prm-facet .multiselect-facet-group .expand-section-button {
+    margin-left: 6px;
+}
+
+prm-facet .section-title .section-title-header {
+    color: #fd5000;
+    font-size: 14pt;
+}
+
+prm-facet prm-facet-exact .section-title:focus .section-title-header,
+prm-facet prm-facet-exact .section-title:hover .section-title-header,
+prm-facet prm-facet-range .section-title:focus .section-title-header,
+prm-facet prm-facet-range .section-title:hover .section-title-header {
+    background-color: transparent;
+    color: #ff7300;
+}
+
+prm-facet .section-title prm-icon {
+    color: #4f2c1d;
+}
+
+prm-facet .md-chip .md-chip-content .persistence-button {
+    width: 1.75rem;
+}
+
+prm-facet .md-chip.facet-excluded .md-chip-content del {
+    text-decoration: none;
+}
+
+prm-facet .md-chip.facet-excluded .md-chip-content .facet-excluded-txt:before {
+    content: "Exclude ";
+}
+
+prm-facet prm-breadcrumbs .md-chip {
+    border: 1px solid #e9e9e9;
+}
+
+prm-facet prm-breadcrumbs .md-button.disabledLockButton {
+    color: #767676 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+prm-facet prm-breadcrumbs .md-button.disabledLockButton span {
+    text-decoration: none;
+}
+
+prm-facet prm-facet-range .section-content {
+    margin-bottom: -18px;
+}
+
+prm-facet .sidebar-inner-wrapper .personalization-section {
+    margin-bottom: 1rem;
+}
+
+prm-facet .sidebar-inner-wrapper .personalization-section .section-content {
+    font-size: 0.9375rem;
+    margin-left: .9em;
+}
+
+prm-facet .sidebar-inner-wrapper .personalization-section .md-button {
+    padding: 0 0.35em;
+}
+
+prm-facet .sidebar-inner-wrapper .personalization-section md-checkbox {
+    left: 0.35em;
+}
+
+prm-facet .sidebar-inner-wrapper .switch-results md-switch {
+    align-items: center;
+    border-radius: 1.5rem;
+    color: #df3602;
+    line-height: 2.25;
+    padding: 0 0.75rem;
+}
+
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:focus.inactive._md-focused:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:focus.inactive.hovered:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:focus.inactive.md-focused:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:focus.inactive:focus:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:focus.inactive:hover:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover.inactive._md-focused:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover.inactive.hovered:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover.inactive.md-focused:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover.inactive:focus:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover.inactive:hover:not([disabled]),
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:focus.active,
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover.active {
+    background-color: #1c626d;
+    color: #fff;
+}
+
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:focus .md-bar,
+prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover .md-bar {
+    background-color: #fff;
+    opacity: 0.4;
+}
+
+/* Hide the Open Access filter. */
+prm-facet .section-content .md-chips .md-chip[data-facet-value="tlevel-open_access"] {
+    display: none;
+}

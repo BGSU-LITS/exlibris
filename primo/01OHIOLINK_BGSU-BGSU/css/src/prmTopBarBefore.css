@@ -5,11 +5,9 @@ prm-top-bar-before .bgsu-header {
     padding: 0 1rem;
 }
 
-@media screen and (min-width: 960px) {
-    prm-top-bar-before .bgsu-header {
-        border-radius: 0 0 2.625rem 2.625rem;
-        padding: 0 2.625rem;
-    }
+.__gt-sm prm-top-bar-before .bgsu-header {
+    border-radius: 0 0 2.625rem 2.625rem;
+    padding: 0 2.625rem;
 }
 
 prm-top-bar-before .bgsu-header-logo,
@@ -27,7 +25,7 @@ prm-top-bar-before .bgsu-header-logo {
 
 prm-top-bar-before .bgsu-header-unit > div {
     display: block;
-    font: normal normal 600 1.25rem/1 "kepler-std-display","Century Schoolbook","New Century Schoolbook","Georgia","Palatino","Bookman",serif;
+    font: normal normal 600 1.25rem/1 "kepler-std-display", "Century Schoolbook", "New Century Schoolbook", "Georgia", "Palatino", "Bookman", serif;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -38,7 +36,6 @@ prm-top-bar-before .bgsu-header-unit > div > span {
 }
 
 prm-top-bar-before .bgsu-header :any-link {
-    box-shadow: none;
     color: #000;
 }
 

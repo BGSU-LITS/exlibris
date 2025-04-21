@@ -1,0 +1,276 @@
+/* Improve padding of search results. */
+prm-search md-content.main > .flex {
+    padding: 0 0.25rem;
+}
+
+.__xs prm-search md-content.main > .flex {
+    padding: 1rem 0.25rem;
+}
+
+.__sm prm-search #facets,
+.__xs prm-search #facets {
+    padding: 0;
+}
+
+.__sm prm-search #facets prm-facet .mobile-scrollbar,
+.__xs prm-search #facets prm-facet .mobile-scrollbar {
+    padding-bottom: 4rem;
+}
+
+.__sm prm-search #facets prm-facet .sidebar-inner-wrapper,
+.__xs prm-search #facets prm-facet .sidebar-inner-wrapper {
+    padding: 1rem;
+}
+
+.__sm prm-search prm-search-result-list .list-spacer-small,
+.__xs prm-search prm-search-result-list .list-spacer-small {
+    min-height: 0;
+}
+
+prm-search prm-brief-result-container .list-item-primary-content {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.__xs prm-search prm-brief-result-container .list-item-primary-content {
+    padding-bottom: 0;
+}
+
+/* Keep facets above everything else when displayed on mobile devices. */
+.__sm prm-search #facets,
+.__xs prm-search #facets {
+    z-index: 999;
+}
+
+/* Rapido expand my results offer. */
+prm-search prm-ngrs-results-button {
+    margin-bottom: 0;
+}
+
+prm-search md-content.main:has([translate="nui.results.search.was.expanded"]) prm-ngrs-results-button {
+    display: none;
+}
+
+prm-search prm-ngrs-results-button .default-card {
+    background-color: #80baac;
+    color: #000;
+}
+
+prm-search prm-ngrs-results-button .md-button.button-as-link {
+    color: #4f2c1d;
+    margin-bottom: 0 !important;
+}
+
+prm-search prm-ngrs-results-button .md-button.button-as-link span {
+    text-decoration: underline;
+    text-decoration-color: #b99b80;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+prm-search prm-ngrs-results-button .md-button.button-as-link:focus:not([disabled]),
+prm-search prm-ngrs-results-button .md-button.button-as-link:hover:not([disabled]),
+prm-search prm-ngrs-results-button .md-button.button-as-link:not([disabled]) [link-arrow] {
+    background-color: transparent;
+    color: #613624;
+}
+
+prm-search prm-ngrs-results-button .md-button.button-as-link:focus:not([disabled]) span,
+prm-search prm-ngrs-results-button .md-button.button-as-link:hover:not([disabled]) span {
+    text-decoration-thickness: 2px;
+}
+
+prm-search prm-ngrs-results-button .md-button.button-as-link.left-button md-icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    opacity: .5;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
+    transition-duration: .3s;
+    transform: translateX(0) rotate(0);
+}
+
+prm-search prm-ngrs-results-button .md-button.button-as-link.left-button:focus md-icon,
+prm-search prm-ngrs-results-button .md-button.button-as-link.left-button:hover md-icon {
+    opacity: 1;
+    transform: translateX(-7px) rotate(0);
+}
+
+prm-search prm-ngrs-results-button .unskewed-divider {
+    background-color: #000;
+    border-color: #000;
+}
+
+/* Personalization dialog. */
+prm-search prm-personalization-dialog.flex {
+    flex: 1 1 100%;
+}
+
+.__gt-sm prm-search prm-personalization-dialog .personalization-dialog {
+    padding-right: 1rem;
+}
+
+.__xs prm-search prm-personalization-dialog .personalization-dialog .checkboxes-tree,
+.__sm prm-search prm-personalization-dialog .personalization-dialog .checkboxes-tree {
+    flex-direction: column;
+}
+
+prm-search prm-personalization-dialog .personalization-dialog .md-button.button-confirm {
+    color: #7d1538;
+}
+
+prm-search prm-personalization-dialog .personalization-dialog .md-button.button-confirm:focus:not([disabled]),
+prm-search prm-personalization-dialog .personalization-dialog .md-button.button-confirm:hover:not([disabled]) {
+    background-color: #7d1538;
+    color: #fff;
+}
+
+prm-search prm-personalization-dialog .personalization-dialog .personalization-dialog-inner {
+    border: 1px solid #7d1538;
+    border-radius: 1.5rem;
+    box-shadow: none;
+}
+
+/* Search results toolbars. */
+prm-search-result-list .mobile-actions > * {
+    line-height: 1em;
+}
+
+prm-search-result-list .pages-separated-with-gaps .results-title:not(.results-title-favorites) {
+    margin: 0 0 0 auto;
+    padding: 0 0 0 1rem !important;
+}
+
+prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page .md-subheader ._md-subheader-inner,
+prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page .md-subheader .md-subheader-inner {
+    left: 1rem;
+}
+
+.__xs prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page:first-of-type .md-subheader.mobile-page-range ._md-subheader-inner,
+.__xs prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page:first-of-type .md-subheader.mobile-page-range .md-subheader-inner {
+    top: -25px;
+}
+
+prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page .md-subheader .tiny-uppercase-text {
+    font-size: 1rem;
+}
+
+prm-search-result-list .pages-separated-with-gaps .list-item-wrapper:nth-last-child(2) {
+    box-shadow: none;
+}
+
+prm-search-result-list .results-title {
+    font-style: normal;
+    padding: 0;
+}
+
+prm-search-result-list prm-add-query-to-saved-searches,
+prm-search-result-list prm-personalize-results-button {
+    height: auto !important;
+}
+
+prm-search-result-list prm-add-query-to-saved-searches .md-button,
+prm-search-result-list prm-personalize-results-button .md-button {
+    height: 2rem;
+    top: 0;
+}
+
+prm-search-result-list prm-personalize-results-button .md-button.button-as-link.link-alt-color:focus:not([disabled]),
+prm-search-result-list prm-personalize-results-button .md-button.button-as-link.link-alt-color:hover:not([disabled]) {
+    background-color: #7d1538;
+    color: #fff;
+}
+
+prm-search-result-tool-bar .results-title {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    padding: 0 0.5rem 0 1rem !important;
+    top: 0;
+}
+
+prm-search-result-tool-bar .is-stuck .results-title {
+    margin-top: 0.25rem;
+}
+
+prm-search-result-tool-bar .md-toolbar-tools {
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+prm-search-result-tool-bar .md-toolbar-tools .md-button {
+    opacity: 1;
+}
+
+prm-search-result-tool-bar .md-toolbar-tools .md-button.md-icon-button {
+    height: 2rem;
+    margin: 0;
+    min-height: 2rem;
+    padding: 0;
+    width: 2rem;
+}
+
+prm-search-result-tool-bar .md-toolbar-tools .md-button.md-icon-button md-icon {
+    transition: none;
+}
+
+prm-search-result-tool-bar .md-toolbar-tools .md-button.dismiss-link md-icon {
+    margin-top: -4px;
+}
+
+prm-search-result-tool-bar .md-toolbar-tools .tiny-uppercase-text {
+    font-size: inherit;
+    letter-spacing: 0;
+    top: 0;
+}
+
+prm-search-result-tool-bar .md-toolbar-tools .toolbar-item {
+    margin-left: 1rem;
+}
+
+/* Brief results. */
+prm-search-result-list .action-list-content::before {
+    border-radius: 0 1.5rem;
+    outline: 2px solid #fd5000;
+}
+
+prm-search-result-list .list-spacer {
+    min-height: 0;
+}
+
+prm-search-result-list prm-brief-result-container {
+    border-radius: 0 1.5rem 0 1.5rem;
+    margin: 2px 0 calc(2px + 1rem) 0;
+    outline: 1px solid #fd5000;
+    padding: 0 0 1rem 0;
+    transition: outline .3s ease;
+}
+
+prm-search-result-list prm-brief-result-container:focus,
+prm-search-result-list prm-brief-result-container:focus-within,
+prm-search-result-list prm-brief-result-container:hover {
+    outline-width: 2px;
+}
+
+prm-search-result-list prm-brief-result-container .list-item-primary-content.has-checkbox {
+    padding-left: calc(2rem + 20px);
+}
+
+prm-search-result-list prm-brief-result-container .list-item-primary-content.has-checkbox .list-item-count {
+    font-weight: 600;
+    left: 1rem;
+    top: 1.1rem;
+}
+
+prm-search-result-list prm-brief-result-container .list-item-primary-content md-checkbox {
+    top: 1rem;
+    left: 1rem;
+}
+
+prm-search-result-list prm-no-search-result md-card.default-card {
+    outline-color: #f37b6c;
+}
+
+/* Hide newspaper spotlight at bottom of brief results. */
+prm-search-result-list #mainResults div:has(> prm-newspapers-spotlight) {
+    display: none;
+}

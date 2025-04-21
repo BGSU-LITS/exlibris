@@ -1,0 +1,32 @@
+prm-page-nav-menu .md-button.md-mini {
+    border-radius: 0.75rem 0 0.75rem 0;
+    box-shadow: none;
+    font-size: 14pt;
+    margin: 1rem 0.5rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    padding: 0;
+}
+
+prm-page-nav-menu .md-button.md-mini.current-bulk {
+    background-color: #4f2c1d;
+    color: #fff;
+}
+
+prm-page-nav-menu .md-button.md-mini.current-page {
+    background-color: #fd5000;
+    color: #fff;
+}
+
+prm-page-nav-menu #resultsPerPage .bulks-options {
+    margin-left: 1rem;
+}
+
+prm-page-nav-menu #resultsPerPage .counter-nav {
+    width: auto;
+    height: auto;
+}
+
+prm-page-nav-menu #resultsPerPage .counter-nav .md-button.md-mini md-icon {
+    vertical-align: text-bottom;
+}
