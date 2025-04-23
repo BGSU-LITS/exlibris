@@ -43,7 +43,7 @@ prm-full-view-cont > .padded-container {
 .__xs :is(prm-opac, alma-htgi-svc) md-tab-content .tab-content-header {
     box-shadow: none;
     margin: 0;
-    padding: 0 0 0 1rem;
+    padding: 0 1rem;
 }
 
 :is(prm-alma-viewit, prm-opac, alma-htgi-svc) .separate-list-items > .separate-list-items {
@@ -114,11 +114,35 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
     padding: 0;
 }
 
-:is(prm-opac, alma-htgi-svc) .section-title {
+:is(prm-opac, alma-htgi-svc) .related-title-location {
+    padding-right: 1ex;
+}
+
+:is(prm-opac, alma-htgi-svc) .related-title .related-title-label,
+:is(prm-opac, alma-htgi-svc) .related-title .related-title-name {
+    color: inherit;
+    font-style: normal;
+    font-weight: 400 !important;
+    text-transform: none;
+}
+
+:is(prm-opac, alma-htgi-svc) .related-title .related-title-label {
+    font-size: 0.9375rem;
+}
+
+:is(prm-opac, alma-htgi-svc) .section-title,
+:is(prm-opac, alma-htgi-svc) .subsection-title {
     font: inherit;
     font-weight: 600;
+    letter-spacing: 0;
     text-transform: none;
     top: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) .subsection-title {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    padding: 0;
 }
 
 :is(prm-opac, alma-htgi-svc) .separate-list-items md-list-item .md-button.item-expand-button {
@@ -209,6 +233,11 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
 :is(prm-opac, alma-htgi-svc) prm-locations > .padding-left-medium {
     margin-right: -10px;
     padding-left: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-locations > .padding-left-medium > .md-button.button-link {
+    margin-top: 0.5rem !important;
+    padding: 0 1rem;
 }
 
 prm-opac-back-button prm-icon {

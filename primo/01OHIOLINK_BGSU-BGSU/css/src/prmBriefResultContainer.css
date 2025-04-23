@@ -2,13 +2,6 @@ prm-brief-result-container .action-list-content md-divider {
     display: none;
 }
 
-prm-brief-result-container .badges,
-prm-brief-result-container prm-quick-link,
-prm-brief-result-container prm-search-result-availability-line > .layout-row,
-prm-brief-result-container prm-chapters-results-line {
-    padding: 0.5rem 0 0 0;
-}
-
 prm-brief-result-container .badges .badge-item .badge-icon,
 prm-brief-result-container prm-quick-link .quick-links-icons,
 prm-brief-result-container prm-search-result-availability-line [availability-type],
@@ -22,21 +15,27 @@ prm-brief-result-container .item-detail {
     line-height: 1.5;
 }
 
-prm-brief-result-container .item-title {
+prm-brief-result-container .item-title,
+prm-chapters-and-reviews-item .item-title {
     cursor: text;
     font-size: 1.25rem;
     line-height: 1.25;
     margin: 0.25rem 0;
     max-width: 100%;
+    text-align: left;
 }
 
 prm-brief-result-container .item-title,
-prm-brief-result-container .item-title span {
+prm-brief-result-container .item-title span,
+prm-chapters-and-reviews-item .item-title,
+prm-chapters-and-reviews-item .item-title span {
     color: #1c626d;
 }
 
 prm-brief-result-container .item-title a:focus span,
-prm-brief-result-container .item-title a:hover span {
+prm-brief-result-container .item-title a:hover span,
+prm-chapters-and-reviews .item-title a:focus span,
+prm-chapters-and-reviews .item-title a:hover span {
     color: #24818F;
 }
 
@@ -45,8 +44,15 @@ prm-brief-result-container .item-title .full-view-mouse-pointer {
     text-decoration: none;
 }
 
-prm-brief-result-container .media-content-type {
+prm-brief-result-container .media-content-type,
+prm-chapters-and-reviews .media-content-type {
     color: #DF3602;
+}
+
+prm-brief-result-container .media-content-type > span,
+prm-chapters-and-reviews .media-content-type > span {
+    font-size: inherit;
+    letter-spacing: inherit;
 }
 
 prm-brief-result-container .result-item-text {
@@ -76,4 +82,19 @@ prm-brief-result-container prm-snippet prm-icon.open-quote md-icon {
 
 prm-brief-result-container prm-snippet prm-highlight + prm-icon.open-quote md-icon {
     transform: scale(0.8) translate(-2px, -2px);
+}
+
+prm-chapters-and-reviews prm-chapters-and-reviews-item md-card {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: inherit;
+    height: auto;
+    line-height: inherit;
+    margin: 0.5rem 0 1rem 1rem;
+    max-height: none;
+    padding: 1px;
+}
+
+prm-chapters-and-reviews prm-chapters-and-reviews-item md-card md-card-content {
+    padding: 0 1.5rem;
 }

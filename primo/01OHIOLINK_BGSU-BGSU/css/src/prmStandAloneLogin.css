@@ -1,0 +1,56 @@
+prm-stand-alone-login .layout-fill {
+    min-height: 100vh;
+    padding: 102px 0;
+}
+
+prm-stand-alone-login .login-header {
+    display: none;
+}
+
+prm-stand-alone-login .login-card {
+    background-color: #4f2c1d;
+    border-radius: .75rem;
+    box-shadow: 0 7px 15px -8px rgba(0, 0, 0, .1), 0 6px 10px -2px rgba(0, 0, 0, .1), 0 5px 24px 4px rgba(0, 0, 0, .1);
+    color: #fff;
+}
+
+prm-stand-alone-login .login-card.login-dialog md-list {
+    padding: 1.5em;
+}
+
+prm-stand-alone-login-after {
+    background-color: #fd5000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/* Make focus and hover styles of login dialog unique. */
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog .md-button:focus,
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog .md-button:hover {
+    background-color: transparent !important;
+}
+
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog :hover {
+    box-shadow: none;
+}
+
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog .md-list-item-text .list-item-title,
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog > .md-no-style .md-list-item-text .list-item-title,
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog .md-secondary-container prm-icon,
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog > .md-no-style .md-secondary-container prm-icon {
+    color: #fff;
+}
+
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog:hover .md-list-item-text .list-item-title,
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog > .md-no-style:hover .md-list-item-text .list-item-title,
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog:hover .md-secondary-container prm-icon,
+prm-stand-alone-login .login-dialog md-list md-list-item.login-brighter-dialog > .md-no-style:hover .md-secondary-container prm-icon {
+    color: #f5c163;
+}
+
+/* Hide external link icon for SAML login. */
+prm-stand-alone-login md-list md-list-item.list-login [external-link] {
+    display: none;
+}

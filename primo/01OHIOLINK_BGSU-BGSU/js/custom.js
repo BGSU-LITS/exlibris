@@ -10,11 +10,43 @@
         }
     }
 
+    // Add top bar to standalone login page.
+    app.component('prmStandAloneLoginAfter', {
+        template: `<prm-topbar></prm-topbar>`
+    });
+
     // Show Search Profile Slots (Tabs and Scopes) by default in Search Bar.
     app.component('prmSearchBarAfter', {
         controller($scope) {
             this.$onInit = function() {
                 $scope.$parent.$ctrl.showTabsAndScopes = true;
+            };
+        },
+    });
+
+    // Fix translation code for "Page" above search results not being displayed
+    // because translation file hadn't loaded yet and isn't in cache.
+    app.component('prmSearchResultListAfter', {
+        controller($element) {
+            this.$onInit = function() {
+                const observe = $element[0].parentElement;
+
+                const observer = new MutationObserver(() => {
+                    const element = observe.querySelector(
+                        '.mobile-page-range .text'
+                    );
+
+                    if (element) {
+                        element.innerText = element.innerText.replace(
+                            'nui.paging.pagenumber',
+                            'Page'
+                        );
+
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(observe, { childList: true, subtree: true });
             };
         },
     });

@@ -28,6 +28,9 @@
 /* prm-topbar: The standard header, including the library search logo. */
 @import 'prmTopBar.css';
 
+/* prm-stand-alone-login: The standalone login page, no default header. */
+@import 'prmStandAloneLogin.css';
+
 /* md-dialog: Mostly the light-on-dark-dialog used for menus. */
 @import 'mdDialog.css';
 
@@ -55,7 +58,7 @@
 /* #rapidoOffer: The Sharing section of a full record for Rapido. */
 @import 'rapidoOffer.css';
 
-/* prm-virtual-browse: Browse shelf section of full records. */
+/* prm-virtual-browse: Browse and more like this sections of full records. */
 @import 'prmVirtualBrowse.css';
 
 /* full-view-additional-info-side-bar: Sidebar with recommendations/persons. */

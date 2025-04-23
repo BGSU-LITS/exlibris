@@ -53,7 +53,13 @@ alma-howovp .neutralized-button:focus a,
 alma-howovp .neutralized-button:focus a:hover,
 alma-howovp .neutralized-button:hover .md-button.arrow-link-button .button-content,
 alma-howovp .neutralized-button:hover a,
-alma-howovp .neutralized-button:hover a:hover
+alma-howovp .neutralized-button:hover a:hover,
+.md-button.arrow-link-button prm-chapters-and-reviews .button-content :focus,
+.md-button.arrow-link-button prm-chapters-and-reviews .button-content :hover,
+prm-chapters-and-reviews .md-button.arrow-link-button .button-content :focus,
+prm-chapters-and-reviews .md-button.arrow-link-button .button-content :hover,
+prm-chapters-and-reviews a :focus,
+prm-chapters-and-reviews a :hover
 {
     background-color: transparent;
     box-shadow: none;
