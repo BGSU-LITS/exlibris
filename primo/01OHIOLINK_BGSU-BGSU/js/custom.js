@@ -179,4 +179,29 @@
             </a>
         `,
     });
+
+    // Add help text to be displayed if there are no results on Browse Search.
+    app.component('prmBrowseSearchAfter', {
+        bindings: {
+            parentCtrl: '<',
+        },
+        template: `
+            <md-content class="main" ng-if="!$ctrl.parentCtrl.showList()" flex>
+                <div class="padding-medium" flex-md="50" flex-lg="50" flex-xl="50" ng-class="{'flex-lgPlus-70': $ctrl.mediaQueries.lgPlus}">
+                    <md-card class="default-card">
+                        <md-card-title>
+                            <h2 translate="nui.browse.help.title"></h2>
+                        </md-card-title>
+                        <md-card-content>
+                            <span translate="nui.browse.help.description"></span>
+                            <ul>
+                                <li translate="nui.browse.help.option1"></li>
+                                <li translate="nui.browse.help.option2"></li>
+                            </ul>
+                        </md-card-content>
+                    </md-card>
+                </div>
+            </md-content>
+        `
+    });
 })();

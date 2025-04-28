@@ -1,0 +1,39 @@
+:is(prm-journals, prm-browse-search-after) md-content.main:has(md-card.default-card) > .padding-medium {
+    max-width: 100%;
+}
+
+.__sm :is(prm-journals, prm-browse-search-after) md-content.main:has(md-card.default-card) {
+    margin-right: 2rem;
+}
+
+.__md :is(prm-journals, prm-browse-search-after) md-content.main:has(md-card.default-card) {
+    margin-right: 30%;
+}
+
+.__lg :is(prm-journals, prm-browse-search-after) md-content.main:has(md-card.default-card) {
+    margin-right: 25%;
+}
+
+.__lgPlus :is(prm-journals, prm-browse-search-after) md-content.main:has(md-card.default-card) {
+    margin-right: 20%;
+}
+
+.__sm prm-browse-search-after md-content.main:has(md-card.default-card) {
+    margin-left: 2rem;
+}
+
+.__md prm-browse-search-after md-content.main:has(md-card.default-card) {
+    margin-left: 30%;
+}
+
+.__lg prm-browse-search-after md-content.main:has(md-card.default-card) {
+    margin-left: 25%;
+}
+
+.__lgPlus prm-browse-search-after md-content.main:has(md-card.default-card) {
+    margin-left: 20%;
+}
+
+prm-browse-search md-content.padded-container:not(:has(md-list)) {
+    padding: 0;
+}

@@ -29,7 +29,8 @@
 #rapidoOffer prm-service-physical-best-offer .get_it_btn_digital,
 #rapidoOffer prm-service-physical-best-offer .get_it_btn_physical,
 prm-recomendations prm-recomendation-item .recommendations-title,
-prm-linked-data md-card md-card-header md-card-header-text h3 .md-button.neutralized-button
+prm-linked-data md-card md-card-header md-card-header-text h3 .md-button.neutralized-button,
+prm-browse-search md-list.prm-list.prm-linkable-list-items.prm-dense-list md-list-item .item-title
 {
     text-decoration: underline;
     text-decoration-color: #f5c163;
@@ -86,7 +87,9 @@ prm-linked-data md-card md-card-header md-card-header-text h3 .md-button.neutral
 alma-howovp .neutralized-button:focus .md-button.arrow-link-button .button-content,
 alma-howovp .neutralized-button:focus a,
 alma-howovp .neutralized-button:hover .md-button.arrow-link-button .button-content,
-alma-howovp .neutralized-button:hover a
+alma-howovp .neutralized-button:hover a,
+prm-browse-search md-list.prm-list.prm-linkable-list-items.prm-dense-list md-list-item:has(a:focus) .item-title,
+prm-browse-search md-list.prm-list.prm-linkable-list-items.prm-dense-list md-list-item:has(a:hover) .item-title
 {
     text-decoration-thickness: 2px;
 }

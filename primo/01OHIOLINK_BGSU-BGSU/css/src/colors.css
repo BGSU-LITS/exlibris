@@ -20,3 +20,8 @@
 .list-item-wrapper:last-of-type {
     box-shadow: none;
 }
+
+/* Do not make labels and placeholders look like links. */
+.request-form md-input-container .md-input-container-dummy>.md-select-dummy ._md-select-value._md-select-placeholder, .request-form md-input-container .md-input-container-dummy>.md-select-dummy .md-select-value.md-select-placeholder, .request-form md-input-container label, .request-form md-input-container label:not(.md-no-float):not(._md-container-ignore), .request-form md-input-container md-select ._md-select-value._md-select-placeholder, .request-form md-input-container md-select .md-select-value.md-select-placeholder {
+    color: #3a3a3a;
+}

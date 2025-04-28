@@ -1,10 +1,10 @@
 /* Make the speed dial widget more consistent and noticable. */
-prm-page-nav-menu #speedDialWidget {
+.facet-to-left prm-page-nav-menu #speedDialWidget {
     bottom: 1rem;
 }
 
-prm-page-nav-menu #speedDialWidget .counter-nav,
-prm-page-nav-menu #speedDialWidget .page-nav-inner::after {
+.facet-to-left prm-page-nav-menu #speedDialWidget .counter-nav,
+.facet-to-left prm-page-nav-menu #speedDialWidget .page-nav-inner::after {
     left: 0;
 }
 
@@ -33,5 +33,5 @@ prm-page-nav-menu #speedDialWidget .page-nav-inner::after {
 
 /* Move proactive chat away from pagination control. */
 body:has(#speedDialWidget) > [id^="bgsu_libchat"] {
-    transform: translate(0, calc(-80px - 1rem)) !important;
+    transform: translate(0, calc(-80px - 1.5rem)) !important;
 }

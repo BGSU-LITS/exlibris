@@ -37,6 +37,10 @@ prm-facet .section-title prm-icon {
     color: #4f2c1d;
 }
 
+prm-facet .sidebar-inner-wrapper:not(:has(.sidebar-section)) {
+    padding-bottom: 0;
+}
+
 prm-facet .md-chip .md-chip-content .persistence-button {
     width: 1.75rem;
 }
@@ -66,7 +70,6 @@ prm-facet prm-breadcrumbs .md-button.disabledLockButton span {
 prm-facet prm-facet-range .section-content {
     margin-bottom: -18px;
 }
-
 prm-facet .sidebar-inner-wrapper .personalization-section {
     margin-bottom: 1rem;
 }
@@ -114,7 +117,30 @@ prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover .md-bar {
     opacity: 0.4;
 }
 
+/* Do not float facet counts to the right. */
+prm-facet .section-content .md-chips .md-chip.wrapping-chip .facet-title {
+    display: block;
+}
+
+prm-facet prm-facet-exact .text-number-space {
+    margin-right: 0;
+}
+
 /* Hide the Open Access filter. */
 prm-facet .section-content .md-chips .md-chip[data-facet-value="tlevel-open_access"] {
     display: none;
+}
+
+/* Journals by Category. */
+prm-databases-categorize .sticking-wrapper {
+    padding-left: 0;
+}
+
+prm-databases-categorize prm-tree-nav {
+    max-width: 240px;
+    width: 240px;
+}
+
+prm-databases-categorize prm-tree-nav:last-child {
+    padding: 0;
 }

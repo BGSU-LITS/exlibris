@@ -44,6 +44,14 @@ prm-brief-result-container .item-title .full-view-mouse-pointer {
     text-decoration: none;
 }
 
+prm-brief-result-container .list-item-primary-content {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.__xs prm-brief-result-container .list-item-primary-content {
+    padding-bottom: 0;
+}
+
 prm-brief-result-container .media-content-type,
 prm-chapters-and-reviews .media-content-type {
     color: #DF3602;

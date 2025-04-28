@@ -67,5 +67,14 @@
 /* prm-page-nav-menu: Navigation menu that appears after search results. */
 @import 'prmPageNavMenu.css';
 
+/* prm-journals: Journal List as well as some Browse Search. */
+@import 'prmJournals.css';
+
+/* prm-journals: The main Browse Seach styles. */
+@import 'prmBrowseSearch.css';
+
+/* prm-favorites: Favorites and search history. */
+@import 'prmFavorites.css';
+
 /* speedDialWidget: Navigation that is used on browse pages. */
 @import 'speedDialWidget.css';

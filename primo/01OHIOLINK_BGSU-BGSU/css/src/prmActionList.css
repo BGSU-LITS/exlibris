@@ -47,10 +47,14 @@ prm-action-list prm-permalink-after .call-action.call-action-QR {
 }
 
 /* Show all actions when multiple items are selected. */
-#actionsList prm-action-list #Mendeley,
-#actionsList prm-action-list #EasyBib,
-#actionsList prm-action-list #Excel,
-#actionsList prm-action-list #BibTeXPushTo {
+#actionsList #Mendeley,
+#actionsList #EasyBib,
+#actionsList #Excel,
+#actionsList #BibTeXPushTo,
+prm-favorites-tool-bar #Mendeley,
+prm-favorites-tool-bar #EasyBib,
+prm-favorites-tool-bar #Excel,
+prm-favorites-tool-bar #BibTeXPushTo {
     display: flex;
 }
 
@@ -67,8 +71,6 @@ prm-action-list .send-actions-content-item > md-content.md-primoExplore-theme {
 }
 
 prm-action-list .send-actions-content-item .form-focus {
-    border-radius: 12px;
-    box-shadow: none;
     margin-bottom: 1rem;
 }
 

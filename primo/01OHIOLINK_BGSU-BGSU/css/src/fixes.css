@@ -19,11 +19,17 @@ prm-search-result-tool-bar .action-list-content prm-export-all {
     left: -1em;
 }
 
+/* Add spaces between required field names in error messages. */
+.help-block .lowercase::before {
+    content: ' ';
+}
+
 /* Do not use all-uppercase text. */
 .md-button,
 .md-tab,
 .medium-uppercase-bold,
-.tiny-uppercase-text {
+.tiny-uppercase-text,
+md-menu-content .menu-title {
     letter-spacing: 0;
     text-transform: none;
 }
@@ -38,6 +44,22 @@ md-dialog md-list md-list-item .md-button:hover:not([disabled]).neutralized-butt
 md-dialog md-list md-list-item button:focus:not([disabled]).neutralized-button,
 md-dialog md-list md-list-item button:hover:not([disabled]).neutralized-button {
     background-color: transparent;
+}
+
+/* Do not move multiselect checkboxes when one is checked. */
+.multiselect-facet-group.multiselect-active .md-chip {
+    transform: none;
+}
+
+/* Fix positioning of the multiselect submit button. */
+.multiselect-submit {
+    left: 0;
+    z-index: 101;
+}
+
+/* Fix citation search form layout on mobile devices. */
+.request-form md-input-container {
+    width: 100%;
 }
 
 /* Realign required field markers. */
@@ -86,6 +108,7 @@ md-backdrop.md-opaque {
 }
 
 /* Leave space for proactive chat below main content. */
+.__gt-xs #citationLinker,
 .__gt-xs md-content.main,
 .__gt-xs .full-view-inner-container {
     min-height: calc(100vh + 16rem);

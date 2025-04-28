@@ -3,10 +3,6 @@ prm-full-view .services-index-under {
     left: 1.75rem;
 }
 
-prm-full-view prm-brief-result-container .list-item-primary-content {
-    padding: 1rem 1rem 0 0;
-}
-
 .__xs prm-full-view prm-brief-result-container .list-item-primary-content {
     padding-left: 0 !important;
 }
@@ -97,6 +93,7 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
 }
 
 :is(prm-opac, alma-htgi-svc) .labeled-block .md-button.button-as-link {
+    border-radius: 0;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -267,12 +264,12 @@ alma-htgi-svc .md-list-item-text > div {
     padding-right: 1rem;
 }
 
-alma-htgi-svc prm-icon {
+alma-htgi-svc .md-button.neutralized-button prm-icon {
     color: rgba(58, 58, 58, .4);
     padding: 0;
 }
 
-alma-htgi-svc md-icon {
+alma-htgi-svc .md-button.neutralized-button prm-icon md-icon {
     height: 12px;
     min-height: 12px;
     min-width: 12px;

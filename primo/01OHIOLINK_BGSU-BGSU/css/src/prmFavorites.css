@@ -1,0 +1,196 @@
+.__xs prm-favorites md-content.main {
+    padding: 1rem 0.25rem;
+}
+
+.__sm prm-favorites md-tabs:has(.sidebar:not(.ng-hide)),
+.__xs prm-favorites md-tabs:has(.sidebar:not(.ng-hide)) {
+    z-index: 13;
+}
+
+.__sm prm-favorites .sidebar-inner-wrapper,
+.__xs prm-favorites .sidebar-inner-wrapper {
+    padding-top: 0;
+    padding-left: 0;
+}
+
+prm-favorites .labels-toolbar {
+    background-color: #fff;
+}
+
+prm-favorites .mobile-layout {
+    padding-top: 2rem;
+}
+
+prm-favorites .section-title .section-title-header {
+    color: #fd5000;
+    font-size: 14pt;
+}
+
+prm-favorites .sidebar .compensate-padding-left {
+    padding-left: 0;
+}
+
+prm-favorites prm-search-result-list .results-title {
+    padding: 0 .625rem 0 1rem;
+}
+
+prm-favorites-edit-labels-menu .labels-menu-button {
+    opacity: 1;
+}
+
+prm-favorites-edit-labels-menu .labels-menu-button.md-button.md-icon-button {
+    margin: 0;
+    padding: 0;
+}
+
+prm-favorites-edit-labels-menu .labels-menu-button.md-button.md-icon-button:focus:not([disabled]),
+prm-favorites-edit-labels-menu .labels-menu-button.md-button.md-icon-button:hover:not([disabled]) {
+    background-color: transparent;
+    color: #7f3f2f;
+}
+
+prm-favorites-labels {
+    margin-top: 0.75rem;
+}
+
+prm-favorites-labels .md-button.button-as-link prm-icon {
+    display: none;
+}
+
+prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content,
+prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content,
+prm-favorites-labels .md-chips .md-chip.toggleable-chip.chip-toggled-on .md-chip-content {
+    border-radius: 1rem;
+    color: #3a3a3a;
+    padding: 0 0.75rem;
+}
+
+prm-favorites-labels .md-chips .md-chip.toggleable-chip.chip-toggled-on .md-chip-content,
+prm-favorites-labels .md-chips .md-chip.toggleable-chip .md-chip-content._md-focused:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip .md-chip-content.hovered:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip .md-chip-content.md-focused:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip .md-chip-content:focus:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip .md-chip-content:hover:not([disabled]),
+prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content._md-focused:not([disabled]),
+prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content.hovered:not([disabled]),
+prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content.md-focused:not([disabled]),
+prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content:focus:not([disabled]),
+prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content._md-focused:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content.hovered:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content.md-focused:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content:focus:not([disabled]),
+prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]) {
+    background-color: #E1D8CD;
+    color: #3a3a3a;
+}
+
+prm-favorites-labels .md-chips .md-chip .md-chip-content .text-in-brackets {
+    font-style: normal;
+}
+
+prm-favorites-record-labels .media-labels .label-item,
+prm-favorites-record-labels .media-labels .label-item.md-chip,
+prm-favorites-record-labels .media-labels.md-chips .label-item,
+prm-favorites-record-labels .media-labels.md-chips .label-item.md-chip {
+    font-size: inherit;
+    height: auto;
+    padding: 0 0.75rem;
+    margin: 0.5rem 1ex 0 0;
+}
+
+prm-favorites-record-labels .media-labels .labels-menu-button.button-with-icon,
+prm-favorites-record-labels .media-labels.md-chips .labels-menu-button.button-with-icon {
+    left: 0;
+    margin-top: 0.5rem;
+    top: 0;
+}
+
+prm-favorites-tool-bar md-toolbar.default-toolbar.is-stuck:not(.md-menu-toolbar) {
+    box-shadow: none;
+    opacity: 1;
+    position: static !important;
+    transform: none;
+}
+
+prm-favorites-tool-bar md-toolbar.default-toolbar.is-stuck:not(.md-menu-toolbar) + div {
+    display: none;
+}
+
+prm-saved-queries-list .md-subheader ._md-subheader-inner,
+prm-saved-queries-list .md-subheader .md-subheader-inner {
+    padding: 1rem .75rem;
+}
+
+prm-saved-queries-list .has-checkbox {
+    min-width: 42px;
+}
+
+prm-saved-queries-list .has-checkbox .list-item-count {
+    top: .6875rem;
+}
+
+prm-saved-queries-list .has-checkbox md-checkbox {
+    left: .75rem;
+    top: .625rem;
+}
+
+prm-saved-queries-list .result-item-actions {
+    margin: 0 0 1rem 0;
+}
+
+prm-saved-queries-list md-list {
+    padding: 0;
+}
+
+prm-saved-queries-list md-list .md-subheader {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+prm-saved-queries-list md-list-item.md-no-proxy,
+prm-saved-queries-list md-list-item .md-no-style {
+    padding: 0;
+}
+
+prm-saved-queries-list md-list-item.md-2-line .md-list-item-text,
+prm-saved-queries-list md-list-item.md-2-line>.md-no-style .md-list-item-text,
+prm-saved-queries-list md-list-item.md-3-line .md-list-item-text,
+prm-saved-queries-list md-list-item.md-3-line>.md-no-style .md-list-item-text {
+    margin: .5rem 0;
+}
+
+prm-saved-queries-list md-list-item.md-2-line .md-list-item-text h3,
+prm-saved-queries-list md-list-item.md-2-line>.md-no-style .md-list-item-text h3,
+prm-saved-queries-list md-list-item.md-3-line .md-list-item-text h3,
+prm-saved-queries-list md-list-item.md-3-line>.md-no-style .md-list-item-text h3 {
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+prm-saved-queries-list md-list-item.md-2-line .md-list-item-text p,
+prm-saved-queries-list md-list-item.md-2-line>.md-no-style .md-list-item-text p,
+prm-saved-queries-list md-list-item.md-3-line .md-list-item-text p,
+prm-saved-queries-list md-list-item.md-3-line>.md-no-style .md-list-item-text p {
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+prm-saved-queries-list md-list-item .md-list-item-inner .md-secondary-container,
+prm-saved-queries-list md-list-item .md-secondary-container {
+    margin: 0;
+}
+
+prm-saved-queries-list  .saved-query-list-2-line .md-list-item-text p.text-headings i {
+    margin: 0;
+}
+
+prm-saved-queries-list .saved-query-list-2-line .md-list-item-text p.text-headings strong {
+    font-size: inherit;
+    opacity: 1;
+    text-transform: none;
+}

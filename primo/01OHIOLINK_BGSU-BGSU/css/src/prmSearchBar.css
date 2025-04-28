@@ -28,6 +28,35 @@ prm-tags-search-bar {
     prm-newspapers-search-bar,
     prm-search-bar,
     prm-tags-search-bar
+)
+:is(
+    #searchBar,
+    .classic-input,
+    .search-element-inner,
+    .simple-search-wrapper
+) {
+    border-radius: 0;
+    outline: none;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-elements-wrapper {
+    line-height: 1.5rem;
+}
+
+:is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
 ) .search-wrapper .search-elements-wrapper {
     max-width: 100%;
     min-height: 0;
@@ -97,26 +126,7 @@ prm-newspapers-search-bar .bold-text {
     .search-actions .md-button.button-confirm,
     .classic-input .md-button.submit-button
 ) {
-    color: #fd5000;
     padding: 0 0.75rem 0 0.5rem;
-}
-
-:is(
-    prm-atoz-search-bar,
-    prm-authority-search-bar,
-    prm-browse-search-bar,
-    prm-newspapers-search-bar,
-    prm-search-bar,
-    prm-tags-search-bar
-)
-:is(
-    .search-actions .md-button.button-confirm:not([disabled]):focus,
-    .search-actions .md-button.button-confirm:not([disabled]):hover,
-    .classic-input .md-button.submit-button:not([disabled]):focus,
-    .classic-input .md-button.submit-button:not([disabled]):hover
-) {
-    color: #fff;
-    background-color: #fd5000;
 }
 
 /* Fix style of Advanced/Simple search buttons. */
@@ -141,18 +151,6 @@ prm-newspapers-search-bar .bold-text {
     prm-tags-search-bar
 ) .search-switch-buttons {
     margin: 0;
-}
-
-.__gt-xs :is(
-    prm-atoz-search-bar,
-    prm-authority-search-bar,
-    prm-browse-search-bar,
-    prm-newspapers-search-bar,
-    prm-search-bar,
-    prm-tags-search-bar
-) .search-switch-buttons {
-    padding-left: 0.75rem;
-    padding-top: 0.75rem;
 }
 
 :is(
@@ -263,7 +261,6 @@ prm-newspapers-search-bar .bold-text {
 ) {
     border-radius: 30px;
     box-shadow: none;
-    outline: none;
 }
 
 .__gt-xs :is(
@@ -290,6 +287,18 @@ prm-newspapers-search-bar .bold-text {
     .classic-input .md-button.submit-button
 ) {
     border-radius: 0 30px 30px 0;
+}
+
+.__gt-xs :is(
+    prm-atoz-search-bar,
+    prm-authority-search-bar,
+    prm-browse-search-bar,
+    prm-newspapers-search-bar,
+    prm-search-bar,
+    prm-tags-search-bar
+) .search-switch-buttons {
+    padding-left: 0.75rem;
+    padding-top: 0.75rem;
 }
 
 /* Set the backdrop behind the advanced search to smallest full height. */
@@ -428,16 +437,14 @@ prm-advanced-search .collapsed-button md-icon {
 
 prm-advanced-search .form-focus {
     border: none;
-    box-shadow: none;
+}
+
+.__xs prm-advanced-search .form-focus {
+    border-radius: 0;
 }
 
 prm-advanced-search .input-complex-rows {
     vertical-align: middle;
-}
-
-prm-advanced-search .md-button.button-confirm {
-    color: #fd5000;
-    font-weight: 600;
 }
 
 prm-advanced-search .md-button.button-confirm:is(:focus, :hover):not([disabled]) {

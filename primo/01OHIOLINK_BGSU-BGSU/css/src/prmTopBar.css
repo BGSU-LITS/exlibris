@@ -102,7 +102,7 @@ prm-topbar prm-user-area-expandable .md-button.button-with-menu-arrow:not(.butto
 
 prm-topbar prm-main-menu[menu-type="menu"] a.md-button {
     padding: 0;
-    width: 6.25rem;
+    width: 6rem;
 }
 
 prm-topbar .buttons-group .md-button,

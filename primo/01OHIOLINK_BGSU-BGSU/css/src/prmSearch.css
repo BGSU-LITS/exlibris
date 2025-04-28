@@ -22,17 +22,13 @@ prm-search md-content.main > .flex {
     padding: 1rem;
 }
 
+prm-search prm-search-result-list .categories-search {
+    margin-top: 8px;
+}
+
 .__sm prm-search prm-search-result-list .list-spacer-small,
 .__xs prm-search prm-search-result-list .list-spacer-small {
     min-height: 0;
-}
-
-prm-search prm-brief-result-container .list-item-primary-content {
-    padding: 1rem 1rem 0 1rem;
-}
-
-.__xs prm-search prm-brief-result-container .list-item-primary-content {
-    padding-bottom: 0;
 }
 
 /* Keep facets above everything else when displayed on mobile devices. */
@@ -138,7 +134,8 @@ prm-search-result-list .mobile-actions > * {
 
 prm-search-result-list .pages-separated-with-gaps .results-title:not(.results-title-favorites) {
     margin: 0 0 0 auto;
-    padding: 0 0 0 1rem !important;
+    padding: 0 .625rem .5rem 1rem !important;
+    top: 0 !important;
 }
 
 prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page .md-subheader ._md-subheader-inner,
@@ -146,9 +143,14 @@ prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-pa
     left: 1rem;
 }
 
+prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page:first-of-type .md-subheader ._md-subheader-inner,
+prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page:first-of-type .md-subheader .md-subheader-inner {
+    top: -26px;
+}
+
 .__xs prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page:first-of-type .md-subheader.mobile-page-range ._md-subheader-inner,
 .__xs prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page:first-of-type .md-subheader.mobile-page-range .md-subheader-inner {
-    top: -25px;
+    top: -34px;
 }
 
 prm-search-result-list .pages-separated-with-gaps .list-item-wrapper.first-in-page .md-subheader .tiny-uppercase-text {
@@ -224,7 +226,7 @@ prm-search-result-tool-bar .md-toolbar-tools .tiny-uppercase-text {
 }
 
 prm-search-result-tool-bar .md-toolbar-tools .toolbar-item {
-    margin-left: 1rem;
+    margin-left: .5rem;
 }
 
 /* Brief results. */
@@ -268,6 +270,41 @@ prm-search-result-list prm-brief-result-container .list-item-primary-content md-
 
 prm-search-result-list prm-no-search-result md-card.default-card {
     outline-color: #f37b6c;
+}
+
+/* Search within on favorites list. */
+prm-search-result-list .search-within .clear-button:focus:not([disabled]),
+prm-search-result-list .search-within .clear-button:hover:not([disabled]) {
+    background-color: transparent;
+    color: #7f3f2f;
+}
+
+prm-search-result-list .search-within .search-button {
+    height: auto;
+    margin: 0 1ex;
+}
+
+prm-search-result-list .search-within .search-button md-icon {
+    margin-top: -4px;
+}
+
+prm-search-result-list .search-within .search-within-input {
+    border-bottom-color: rgba(0, 0, 0, 0.54);
+}
+
+prm-search-result-list .search-within md-input-container.md-input-focused input,
+prm-search-result-list .search-within md-input-container.md-input-has-value input {
+    font-size: 1rem;
+    min-width: 120px;
+}
+
+prm-search-result-list .search-within md-input-container.md-input-focused input::placeholder,
+prm-search-result-list .search-within md-input-container.md-input-has-value input::placeholder {
+    transform: none;
+}
+
+prm-search-result-list .search-within md-input-container:not(.md-input-focused) input::placeholder {
+    color: rgb(117, 117, 117);
 }
 
 /* Hide newspaper spotlight at bottom of brief results. */

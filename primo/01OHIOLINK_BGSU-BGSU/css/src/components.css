@@ -24,6 +24,14 @@ ul {
     margin-right: .5rem;
 }
 
+/* Simplify success bars. */
+.bar.success-bar {
+    border: none;
+    color: #000;
+    margin: .5rem 0;
+    width: auto !important;
+}
+
 /* Classic inputs are typically search boxes with submit buttons. */
 .classic-input {
     border-radius: 1.5rem;
@@ -35,26 +43,41 @@ ul {
 }
 
 .classic-input .md-button {
-    border-radius: 0 1.5rem 1.5rem 0;
+    border-radius: 0 1rem 1rem 0;
+    line-height: 1;
+    min-width: 0;
+    padding: 0 0.5rem;
 }
 
 .classic-input .search-scope {
     border-radius: 0;
+    line-height: 1.5;
+}
+
+.__xs .classic-input .search-scope {
+    max-width: 35%;
 }
 
 .classic-input md-input-container {
-    min-height: 3rem;
+    min-height: 0;
     padding: 0;
 }
 
 .classic-input md-input-container label,
 .classic-input md-input-container label:not(.md-no-float) {
     padding: 0;
-    transform: translate3d(0.75em, 2.25em, 0) scale(1);
+    transform: translate3d(0.75em, 1.875em, 0) scale(1);
 }
 
-.classic-input md-icon {
-    margin-top: -4px;
+/* Form focus is used in advanced and citation search, and item actions. */
+.form-focus {
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+/* Form shaded content is used in the citation search. */
+.form-shaded-content {
+    background-color: transparent;
 }
 
 /* Remove borders and backdrops from list items. */
@@ -136,6 +159,27 @@ md-toolbar:not(.md-menu-toolbar) .toolbar-divider {
     height: 80%;
 }
 
+/* Large submit buttons can be BGSU orange. */
+.md-button.button-confirm.button-large,
+.md-button.button-confirm.large-icon,
+.md-button.button-confirm.submit-button,
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary {
+    color: #fd5000;
+    font-weight: 600;
+}
+
+.md-button.button-confirm.button-large:focus:not([disabled]),
+.md-button.button-confirm.button-large:hover:not([disabled]),
+.md-button.button-confirm.large-icon:focus:not([disabled]),
+.md-button.button-confirm.large-icon:hover:not([disabled]),
+.md-button.button-confirm.submit-button:focus:not([disabled]),
+.md-button.button-confirm.submit-button:hover:not([disabled]),
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary:focus:not([disabled]),
+.multiselect-submit .multiselect-submit-inner .md-button.md-primary:hover:not([disabled]) {
+    background-color: #fd5000;
+    color: #fff;
+}
+
 /* Fast action buttons are primarily used for the speed dial widget. */
 .md-button.md-fab {
     padding: 0;
@@ -169,6 +213,65 @@ prm-featured-result-item md-card md-card-title:not(#featuredResultTitle) {
     padding-bottom: 0;
 }
 
+/* Outlined chips are used for labels on favorites. */
+.md-chips .md-chip.outline-chip {
+    box-shadow: none;
+    background-color: #E1D8CD;
+    color: #3a3a3a;
+}
+
+.md-chips .md-chip.toggleable-chip .md-chip-remove-container button {
+    padding: 0 0.75rem;
+}
+
+/* Improve appearance of datepicker. */
+.md-datepicker-calendar-pane .md-calendar tr:last-child td {
+    border-bottom-color: rgba(0, 0, 0, .2);
+}
+
+.md-datepicker-calendar-pane .md-datepicker-input-mask {
+    height: 0;
+}
+
+.md-datepicker-calendar-pane .md-calendar-scroll-mask {
+    vertical-align: bottom;
+}
+
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon md-datepicker .md-datepicker-button {
+    position: absolute;
+    left: -24px;
+    padding: 0;
+    width: 24px;
+}
+
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon.md-input-focused:after {
+    width: 100%;
+    margin-left: 0;
+}
+
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon md-datepicker .md-datepicker-input-container {
+    width: 100%;
+}
+
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon md-datepicker .md-datepicker-input-container input {
+    border-bottom-color: rgba(0, 0, 0, .54);
+    font-size: 1rem;
+    max-width: 100%;
+}
+
+.md-datepicker-triangle-button.md-button.md-icon-button,
+.md-datepicker-triangle-button.md-button.md-icon-button:focus:not([disabled]),
+.md-datepicker-triangle-button.md-button.md-icon-button:hover:not([disabled]) {
+    color: #3a3a3a;
+    right: 6px;
+}
+
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon md-datepicker .md-datepicker-button:focus:not([disabled]),
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon md-datepicker .md-datepicker-button:hover:not([disabled]) {
+    background-color: transparent;
+    color: #7f3f2f;
+}
+
 /* Remove some odd styles from input containers. */
 md-input-container {
     padding-top: 0;
@@ -180,11 +283,99 @@ md-input-container.md-input-has-value label:not(.md-no-float) {
     opacity: 1;
 }
 
+/* Menu content used for labels on favorites. */
+md-menu-content .menu-title {
+    padding: 0.25rem 1rem;
+}
+
+md-menu-content md-input-container input {
+    border-bottom-color: rgba(0, 0, 0, 0.54);
+}
+
+md-menu-content md-menu-item > .md-button {
+    font-size: 1rem;
+}
+
+md-menu-content.menu-with-footer .menu-footer md-input-container {
+    max-width: 100%;
+    margin: 1rem;
+}
+
 /* Align radio buttons with their labels. */
 md-radio-button .md-label {
     height: auto;
     min-height: 20px;
     vertical-align: top;
+}
+
+/* Tree navs are primarily used on Journal List. */
+prm-tree-nav md-list md-list:before {
+    display: none;
+}
+
+prm-tree-nav md-list md-list-item.md-no-proxy {
+    padding: 0 0 0 .75rem;
+}
+
+prm-tree-nav md-list md-list-item:after {
+    background-color: #fd5000;
+    left: 1.75rem;
+    opacity: 1;
+    top: .9375rem;
+}
+
+prm-tree-nav md-list md-list-item .md-button,
+prm-tree-nav md-list md-list-item md-button {
+    border-radius: 3px;
+    color: #3a3a3a;
+    font-size: 0.9375rem;
+}
+
+prm-tree-nav md-list md-list-item.has-branches:after {
+    display: none;
+}
+
+prm-tree-nav md-list md-list-item .md-button p,
+prm-tree-nav md-list md-list-item md-button p {
+    line-height: 1.2;
+}
+
+prm-tree-nav md-list md-list-item .md-button:focus:not([disabled]),
+prm-tree-nav md-list md-list-item .md-button:hover:not([disabled]),
+prm-tree-nav md-list md-list-item md-button:focus:not([disabled]),
+prm-tree-nav md-list md-list-item md-button:hover:not([disabled]) {
+    background-color: #3a3a3a;
+    color: #fff;
+}
+
+prm-tree-nav md-list md-list-item .md-button.branch-arrow,
+prm-tree-nav md-list md-list-item md-button.branch-arrow {
+    color: #fd5000;
+}
+
+prm-tree-nav md-list md-list-item .md-button.branch-arrow:focus:not([disabled]),
+prm-tree-nav md-list md-list-item .md-button.branch-arrow:hover:not([disabled]),
+prm-tree-nav md-list md-list-item md-button.branch-arrow:focus:not([disabled]),
+prm-tree-nav md-list md-list-item md-button.branch-arrow:hover:not([disabled]) {
+    background-color: #fff;
+    color: #ff7300;
+}
+
+prm-tree-nav md-list md-list-item .md-button.branch-arrow md-icon,
+prm-tree-nav md-list md-list-item md-button.branch-arrow md-icon {
+    transform: none;
+}
+
+prm-tree-nav md-list md-list-item .md-button.branch-name,
+prm-tree-nav md-list md-list-item md-button.branch-name {
+    margin: .25rem 0;
+    min-height: .75rem;
+    padding: 3px .25em;
+}
+
+prm-tree-nav md-list md-list-item .md-button.branch-name.is-selected,
+prm-tree-nav md-list md-list-item md-button.branch-name.is-selected {
+    color: #1c626d;
 }
 
 /* Standardize select appearance. */
@@ -193,7 +384,6 @@ md-radio-button .md-label {
 ._md-select-value .md-select-icon::after,
 .md-select-value ._md-select-icon::after,
 .md-select-value .md-select-icon::after {
-    font-size: 1rem;
     top: 2px;
 }
 
@@ -204,6 +394,10 @@ md-radio-button .md-label {
 .md-select-value .md-select-icon {
     margin: 0 0 0 4px;
     width: auto;
+}
+
+md-select[disabled] .md-select-value .md-select-icon {
+    display: none;
 }
 
 /* Improve readability of tabs. */
@@ -257,4 +451,25 @@ md-radio-button .md-label {
 
 .service-form .service-form-static-panel .md-input-container-dummy .label-dummy {
     color: #3a3a3a;
+}
+
+.service-form .service-form-dynamic-panel > form > .layout-row > .layout-column {
+    width: 100%;
+}
+
+.service-form .service-form-dynamic-panel md-input-container {
+    width: 100%;
+}
+
+.service-form .service-form-dynamic-panel .relative-position > label {
+    font-size: 14px;
+    left: 3px;
+    position: relative;
+    top: 20px;
+}
+
+.service-form .service-form-dynamic-panel .relative-position > prm-icon {
+    left: -24px;
+    position: absolute;
+    top: 16px;
 }

@@ -747,9 +747,9 @@
 
   .prm-warn, md-input-container.md-required:before, md-input-container.md-input-invalid:before, .required-starlet, .multiselect-facet-group .md-chip.facet-excluded md-checkbox.md-checked .md-container,
   .multiselect-facet-group .md-chip.facet-excluded md-checkbox.md-checked ._md-container, .md-chip-remove-container button:hover md-icon, .md-chip-remove-container button:focus md-icon, prm-tags-list .md-chips.md-removable .md-chip .md-chip-remove md-icon, prm-tags-list .md-chips.md-removable md-chip .md-chip-remove md-icon, prm-tags-list md-chips.md-removable .md-chip .md-chip-remove md-icon, prm-tags-list md-chips.md-removable md-chip .md-chip-remove md-icon, md-input-container.md-input-invalid, .md-chips .md-chip.toggleable-chip .md-chip-remove-container prm-icon.close-button {
-    color: #ff6347; }
+    color: #d62100; }
     .prm-warn-bg, .multiselect-facet-group .md-chip.facet-excluded md-checkbox.md-checked.md-focused ._md-container:before {
-      background-color: #ff6347; }
+      background-color: #d62100; }
       .prm-warn-bg.prm-hue1, .multiselect-facet-group .md-chip.facet-excluded md-checkbox.md-checked .md-icon,
       .multiselect-facet-group .md-chip.facet-excluded md-checkbox.md-checked ._md-icon, .multiselect-facet-group .md-chip.facet-excluded md-checkbox.md-checked.md-focused .prm-hue1._md-container:before, md-input-container.md-input-invalid:after {
         background-color: #e02200; }
