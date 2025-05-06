@@ -1,18 +1,99 @@
 (() => {
+
+    // Automatically perform search when a Search Profile Slot is selected.
+    window.appConfig['primo-view']['attributes-map'].tabsRemote = 'true';
+
+    // Load proactive chat script.
+    const script = document.createElement('script');
+
+    script.src = 'https://lib.bgsu.edu/template/2.0.0-b20/libchat.js';
+    script.defer = true;
+
+    script.addEventListener('load', () => {
+        // After script has loaded, setup the proactive chat.
+        bgsu_libchat.setup(
+            'https://bgsu.libanswers.com/chat/widget/1d32264c0ea43602bbbbf36436c0d569',
+            3057,
+            [{d: [7259]}],
+        );
+    });
+
+    document.head.appendChild(script);
+
+    // Create Angular components to customize view.
     const app = angular.module('viewCustom', ['angularLoad']);
-
-    // Do not open Main Menu links in new tabs/windows.
-    const menu = window.appConfig.tiles.MainMenuTileInterface;
-
-    for (const key of Object.keys(menu)) {
-        for (let count = 0; count < menu[key].mainview.length; count++) {
-            menu[key].mainview[count].target = '_self';
-        }
-    }
 
     // Add top bar to standalone login page.
     app.component('prmStandAloneLoginAfter', {
         template: `<prm-topbar></prm-topbar>`
+    });
+
+    // Do not open Main Menu links in new tabs/windows.
+    // Move items by label to the user menu instead of main menu.
+    app.component('prmTopNavBarLinksAfter', {
+        controller($scope, $element, $compile) {
+            this.$onInit = function() {
+                const labels = [
+                    'citationlinker',
+                    'PurchaseRequest',
+                    'PurchaseRequestForm'
+                ];
+
+                const menu = $scope.$parent.$ctrl.mainView;
+                const move = [];
+
+                let count = menu.length;
+
+                while (count--) {
+                    menu[count].target = '_self';
+
+                    if (labels.includes(menu[count].label)) {
+                        move.unshift(menu[count]);
+                        menu.splice(count, 1);
+                    }
+                };
+
+                const observe = $element[0].closest('prm-topbar');
+
+                const observer = new MutationObserver(() => {
+                    const element = observe.querySelector('.my-refworks-ctm');
+
+                    if (element) {
+                        move.forEach((item) => {
+                            if (typeof(item.href) === 'undefined') {
+                                item.href = item.url;
+
+                                if (typeof(item.sref.params) !== 'undefined') {
+                                    const params = new URLSearchParams(
+                                        item.sref.params
+                                    );
+
+                                    item.href += '?' + params.toString();
+                                }
+                            }
+
+                            const compiled = angular.element($compile(`
+                                <md-menu-item class="menu-item-indented">
+                                    <a class="md-button md-primoExplore-theme md-ink-ripple" role="menuitem"
+                                        href="${item.href}" target="${item.target}">
+                                        <span translate="${$scope.$parent.$ctrl.getMenuLabel(item)}"></span>
+                                    </a>
+                                </md-menu-item>
+                            `)($scope));
+
+                            element.parentElement.insertBefore(
+                                compiled[0],
+                                element
+                            );
+                        });
+
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(observe, { childList: true, subtree: true });
+            };
+        },
     });
 
     // Show Search Profile Slots (Tabs and Scopes) by default in Search Bar.
@@ -51,8 +132,35 @@
         },
     });
 
-    // Automatically perform search when a Search Profile Slot is selected.
-    window.appConfig['primo-view']['attributes-map'].tabsRemote = 'true';
+    // Improve date range facet by selecting checkbox when changed.
+    app.component('prmFacetRangeAfter', {
+        controller($element) {
+            this.$onInit = function() {
+                const observe = $element[0].parentElement;
+
+                const observer = new MutationObserver(() => {
+                    const element = observe.querySelector('md-checkbox');
+
+                    if (element) {
+                        observe.querySelectorAll(
+                            'input[type="number"]'
+                        ).forEach((input) => input.addEventListener(
+                            'change',
+                            () => {
+                                if (!element.hasAttribute('checked')) {
+                                    element.click();
+                                }
+                            }
+                        ));
+
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(observe, { childList: true, subtree: true });
+            };
+        },
+    });
 
     // Creates duplicates of Actions that call those actions.
     const callActions = {
@@ -113,6 +221,33 @@
         },
     });
 
+    // Prevent clicks of items from toggling details to make selection easier.
+    app.component('prmLocationItemAfter', {
+        controller($element) {
+            this.$onInit = function() {
+                const observe = $element[0].parentElement;
+
+                const observer = new MutationObserver(() => {
+                    const element = observe.querySelector(
+                        '.md-list-item-text'
+                    );
+
+                    if (element) {
+
+                        element.addEventListener(
+                            'click',
+                            (event) => event.stopPropagation()
+                        );
+
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(observe, { childList: true, subtree: true });
+            };
+        },
+    });
+
     // Collapse the Alma Other Members list by default.
     app.component('prmAlmaOtherMembersAfter', {
         controller($scope) {
@@ -121,23 +256,6 @@
             };
         },
     });
-
-    // Load proactive chat script.
-    const script = document.createElement('script');
-
-    script.src = 'https://lib.bgsu.edu/template/2.0.0-b20/libchat.js';
-    script.defer = true;
-
-    script.addEventListener('load', () => {
-        // After script has loaded, setup the proactive chat.
-        bgsu_libchat.setup(
-            'https://bgsu.libanswers.com/chat/widget/1d32264c0ea43602bbbbf36436c0d569',
-            3057,
-            [{d: [7259]}],
-        );
-    });
-
-    document.head.appendChild(script);
 
     // Add BGSU University Libraries header before Top Bar.
     app.component('prmTopBarBefore', {
