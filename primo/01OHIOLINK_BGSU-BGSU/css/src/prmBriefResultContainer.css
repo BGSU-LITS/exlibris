@@ -15,6 +15,15 @@ prm-brief-result-container .item-detail {
     line-height: 1.5;
 }
 
+/* Force course information to new line and hide separator that appears first. */
+prm-brief-result-container .item-detail > span:has(span[data-field-selector="crsinfo"]) {
+    display: block;
+}
+
+prm-brief-result-container .item-detail > span:has(span[data-field-selector="crsinfo"]) .media-delimiter:first-child {
+    display: none;
+}
+
 prm-brief-result-container .item-title,
 prm-chapters-and-reviews-item .item-title {
     cursor: text;

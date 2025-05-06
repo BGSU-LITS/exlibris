@@ -37,6 +37,12 @@ prm-search prm-search-result-list .categories-search {
     z-index: 999;
 }
 
+/* Use background but remove rounded corners on first alert bar. */
+prm-search > prm-alert-bar .bar.alert-bar {
+    background-color: #f5c163;
+    border-radius: 0;
+}
+
 /* Rapido expand my results offer. */
 prm-search prm-ngrs-results-button {
     margin-bottom: 0;
@@ -46,33 +52,8 @@ prm-search md-content.main:has([translate="nui.results.search.was.expanded"]) pr
     display: none;
 }
 
-prm-search prm-ngrs-results-button .default-card {
-    background-color: #80baac;
-    color: #000;
-}
-
 prm-search prm-ngrs-results-button .md-button.button-as-link {
-    color: #4f2c1d;
     margin-bottom: 0 !important;
-}
-
-prm-search prm-ngrs-results-button .md-button.button-as-link span {
-    text-decoration: underline;
-    text-decoration-color: #b99b80;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-}
-
-prm-search prm-ngrs-results-button .md-button.button-as-link:focus:not([disabled]),
-prm-search prm-ngrs-results-button .md-button.button-as-link:hover:not([disabled]),
-prm-search prm-ngrs-results-button .md-button.button-as-link:not([disabled]) [link-arrow] {
-    background-color: transparent;
-    color: #613624;
-}
-
-prm-search prm-ngrs-results-button .md-button.button-as-link:focus:not([disabled]) span,
-prm-search prm-ngrs-results-button .md-button.button-as-link:hover:not([disabled]) span {
-    text-decoration-thickness: 2px;
 }
 
 prm-search prm-ngrs-results-button .md-button.button-as-link.left-button md-icon {

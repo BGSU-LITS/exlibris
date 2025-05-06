@@ -1,3 +1,8 @@
+/* Hide the full record services index. */
+prm-full-view .services-index-under {
+    display: none;
+}
+
 /* Adjust spacing of full view both as popup and standalone pages. */
 prm-full-view .services-index-under {
     left: 1.75rem;
@@ -142,7 +147,7 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
     padding: 0;
 }
 
-:is(prm-opac, alma-htgi-svc) .separate-list-items md-list-item .md-button.item-expand-button {
+:is(prm-opac, alma-htgi-svc) .separate-list-items:has(.item-expand-button) md-list-item .md-button.item-expand-button {
     align-self: start;
     border-radius: 50%;
     height: 40px;
@@ -151,7 +156,7 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
     padding: 0;
 }
 
-:is(prm-opac, alma-htgi-svc) .separate-list-items md-list-item .md-button.item-expand-button prm-icon.rotate-180 md-icon {
+:is(prm-opac, alma-htgi-svc) .separate-list-items md-list-item.has-expand .md-button.item-expand-button prm-icon.rotate-180 md-icon {
     transform: rotate(180deg) translateY(4px);
 }
 
@@ -159,22 +164,8 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
     display: none;
 }
 
-:is(prm-opac, alma-htgi-svc) md-list-item.md-2-line .md-list-item-text h3,
-:is(prm-opac, alma-htgi-svc) md-list-item.md-2-line > .md-no-style .md-list-item-text h3,
-:is(prm-opac, alma-htgi-svc) md-list-item.md-3-line .md-list-item-text h3,
-:is(prm-opac, alma-htgi-svc) md-list-item.md-3-line > .md-no-style .md-list-item-text h3 {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    letter-spacing: 0;
-}
-
-:is(prm-opac, alma-htgi-svc) md-list-item.md-2-line .md-list-item-text p,
-:is(prm-opac, alma-htgi-svc) md-list-item.md-2-line > .md-no-style .md-list-item-text p,
-:is(prm-opac, alma-htgi-svc) md-list-item.md-3-line .md-list-item-text p,
-:is(prm-opac, alma-htgi-svc) md-list-item.md-3-line > .md-no-style .md-list-item-text p {
-    font-weight: inherit;
-    line-height: 1.5;
-    letter-spacing: 0;
+:is(prm-opac, alma-htgi-svc) md-tab-content:has(prm-locations) {
+    padding: 0;
 }
 
 :is(prm-opac, alma-htgi-svc) md-tab-content > div {
@@ -196,10 +187,6 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
     margin: 0 0 -0.25rem 0;
 }
 
-:is(prm-opac, alma-htgi-svc) prm-location > .md-button.neutralized-button {
-    color: #000;
-}
-
 :is(prm-opac, alma-htgi-svc) prm-location-items > .md-button {
     margin-top: 0.5rem !important;
     padding: 0 1rem;
@@ -207,6 +194,10 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
 
 :is(prm-opac, alma-htgi-svc) prm-location-items .bar {
     margin: 0.5rem 0 0 0;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-location-items .item-days {
+    font-size: inherit;
 }
 
 :is(prm-opac, alma-htgi-svc) prm-location-items .summary-brief-header {
@@ -228,13 +219,29 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
 }
 
 :is(prm-opac, alma-htgi-svc) prm-locations > .padding-left-medium {
-    margin-right: -10px;
     padding-left: 0;
 }
 
 :is(prm-opac, alma-htgi-svc) prm-locations > .padding-left-medium > .md-button.button-link {
     margin-top: 0.5rem !important;
     padding: 0 1rem;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-locations .separate-list-items,
+:is(prm-opac, alma-htgi-svc) prm-locations .separate-list-items md-list-item {
+    padding: 0;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-locations prm-location > .md-button.neutralized-button {
+    color: #000;
+    border-radius: 1rem 0 1rem 0;
+    padding: .25rem 0 .25rem 1rem;
+    transition: background-color .3s ease;
+}
+
+:is(prm-opac, alma-htgi-svc) prm-locations prm-location > .md-button.neutralized-button:focus:not([disabled]),
+:is(prm-opac, alma-htgi-svc) prm-locations prm-location > .md-button.neutralized-button:hover:not([disabled]) {
+    background-color: #f1ebe5;
 }
 
 prm-opac-back-button prm-icon {

@@ -20,6 +20,10 @@ prm-facet .multiselect-facet-group .expand-section-button {
     margin-left: 6px;
 }
 
+prm-facet .section-title {
+    min-height: 1.875rem;
+}
+
 prm-facet .section-title .section-title-header {
     color: #fd5000;
     font-size: 14pt;
@@ -115,6 +119,15 @@ prm-facet .sidebar-inner-wrapper .switch-results md-switch:focus .md-bar,
 prm-facet .sidebar-inner-wrapper .switch-results md-switch:hover .md-bar {
     background-color: #fff;
     opacity: 0.4;
+}
+
+/* Move Search within text and Sort by to end of facets. */
+prm-facet .sidebar-inner-wrapper .sidebar-section:has(prm-search-result-sort-by) {
+    order: 98;
+}
+
+prm-facet .sidebar-inner-wrapper .switch-results {
+    order: 99;
 }
 
 /* Do not float facet counts to the right. */

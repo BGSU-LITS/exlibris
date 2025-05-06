@@ -3,16 +3,6 @@ prm-alma-other-members .bold {
     font-weight: 600;
 }
 
-prm-alma-other-members .md-button,
-prm-alma-other-members .md-button._md-focused:not([disabled]),
-prm-alma-other-members .md-button.hovered:not([disabled]),
-prm-alma-other-members .md-button.md-focused:not([disabled]),
-prm-alma-other-members .md-button:focus:not([disabled]),
-prm-alma-other-members .md-button:hover:not([disabled]) {
-    background-color: transparent;
-    color: #000;
-}
-
 prm-alma-other-members .md-button.item-expand-button,
 prm-alma-other-members .md-button.md-icon-button {
     color: #4f2c1d;
@@ -26,9 +16,34 @@ prm-alma-other-members .md-button.md-icon-button:hover:not([disabled]) {
     color: #fff;
 }
 
+prm-alma-other-members .md-button.neutralized-button {
+    background-color: transparent;
+    border-radius: 1rem 0 1rem 0;
+    color: #000;
+    padding: .25rem 0 .25rem 1rem;
+    transition: background-color .3s ease;
+}
+
+prm-alma-other-members .md-button.neutralized-button._md-focused:not([disabled]),
+prm-alma-other-members .md-button.neutralized-button.hovered:not([disabled]),
+prm-alma-other-members .md-button.neutralized-button.md-focused:not([disabled]),
+prm-alma-other-members .md-button.neutralized-button:focus:not([disabled]),
+prm-alma-other-members .md-button.neutralized-button:hover:not([disabled]) {
+    background-color:#f1ebe5;
+    color: #000;
+}
+
 prm-alma-other-members .md-button.section-title {
     border-radius: 0;
-    padding: 0.5rem 0 0 0;
+    line-height: 40px;
+    margin: .5rem 0 0 0;
+    padding: 0;
+}
+
+prm-alma-other-members .md-button.section-title:focus:not([disabled]),
+prm-alma-other-members .md-button.section-title:hover:not([disabled]) {
+    background-color: transparent;
+    color: #7f3f2f;
 }
 
 prm-alma-other-members .md-button br {
@@ -43,10 +58,9 @@ prm-alma-other-members md-list {
     padding: 0;
 }
 
-prm-alma-other-members md-list-item.md-2-line,
-prm-alma-other-members md-list-item.md-2-line > .md-no-style {
-    padding-top: 0.5rem;
+prm-alma-other-members md-list-item.md-2-line:has(.md-button.neutralized-button) {
     min-height: 0;
+    padding: 0;
 }
 
 /* Hide the Register button under other institutions. */

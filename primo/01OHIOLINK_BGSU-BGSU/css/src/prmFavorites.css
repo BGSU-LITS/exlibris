@@ -162,24 +162,6 @@ prm-saved-queries-list md-list-item.md-3-line>.md-no-style .md-list-item-text {
     margin: .5rem 0;
 }
 
-prm-saved-queries-list md-list-item.md-2-line .md-list-item-text h3,
-prm-saved-queries-list md-list-item.md-2-line>.md-no-style .md-list-item-text h3,
-prm-saved-queries-list md-list-item.md-3-line .md-list-item-text h3,
-prm-saved-queries-list md-list-item.md-3-line>.md-no-style .md-list-item-text h3 {
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: 1.5;
-}
-
-prm-saved-queries-list md-list-item.md-2-line .md-list-item-text p,
-prm-saved-queries-list md-list-item.md-2-line>.md-no-style .md-list-item-text p,
-prm-saved-queries-list md-list-item.md-3-line .md-list-item-text p,
-prm-saved-queries-list md-list-item.md-3-line>.md-no-style .md-list-item-text p {
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 1.5;
-}
-
 prm-saved-queries-list md-list-item .md-list-item-inner .md-secondary-container,
 prm-saved-queries-list md-list-item .md-secondary-container {
     margin: 0;
