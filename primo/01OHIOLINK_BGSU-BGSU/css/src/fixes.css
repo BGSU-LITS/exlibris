@@ -3,6 +3,37 @@
     background: #fe871a;
 }
 
+/* Reset overly applied styles from _ai-insights-link.scss. */
+a {
+    margin-bottom: 0;
+}
+
+prm-icon md-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    top: 0;
+}
+
+.separate-list-items md-list-item .item-expand-button md-icon {
+    top: -.1rem;
+}
+
+/* Always show scrollbars on the body so page doesn't jump around. */
+body {
+    overflow-y: scroll;
+}
+
+/* Do not disable scrolling if a dialog is not being shown. */
+body:not(.md-dialog-is-showing,:has(md-backdrop)) {
+    position: static !important;
+}
+
+body:not(.md-dialog-is-showing,:has(md-backdrop)) .md-scroll-mask {
+    display: none;
+}
+
 /* Improve appearance of popup action items. */
 .focused-item-shadow.without-halo,
 prm-account .action-list-content,
@@ -28,6 +59,7 @@ prm-search-result-tool-bar .action-list-content prm-export-all {
 .md-button,
 .md-tab,
 .medium-uppercase-bold,
+.text-uppercase,
 .tiny-uppercase-text,
 md-menu-content .menu-title {
     letter-spacing: 0;
@@ -44,6 +76,12 @@ md-dialog md-list md-list-item .md-button:hover:not([disabled]).neutralized-butt
 md-dialog md-list md-list-item button:focus:not([disabled]).neutralized-button,
 md-dialog md-list md-list-item button:hover:not([disabled]).neutralized-button {
     background-color: transparent;
+}
+
+/* Reposition close icon when not in a button-with-icon. */
+.md-button > prm-icon[icon-definition="ic_close_24px"] md-icon {
+    position: relative;
+    top: -2px;
 }
 
 /* Do not move multiselect checkboxes when one is checked. */
@@ -163,9 +201,43 @@ prm-alma-viewit-items ._md-secondary-container md-icon {
     width: 12px;
 }
 
+/* Fix appearance of alphabet toolbar. */
+prm-alphabet-toolbar > .padding-medium {
+    padding: 1.5rem 0 0 0;
+}
+
+prm-alphabet-toolbar .md-button {
+    padding: 0;
+}
+
+prm-alphabet-toolbar .md-button._md-focused:not([disabled]),
+prm-alphabet-toolbar .md-button.hovered:not([disabled]),
+prm-alphabet-toolbar .md-button.md-focused:not([disabled]),
+prm-alphabet-toolbar .md-button:focus:not([disabled]),
+prm-alphabet-toolbar .md-button:hover:not([disabled]) {
+    color: #4f2c1d;
+}
+
 /* Fix spacing around citation trail buttons. */
 prm-citation-trails-indication.margin-left-small {
     margin: 0 1ex;
+}
+
+/* Fix spacing of progress bars, and improve legibility of labels. */
+prm-progress-bar .ProgressBar .ProgressBarSteps {
+    padding: 0;
+}
+
+prm-progress-checkbox .date,
+prm-progress-checkbox .status {
+    color: #333;
+    font: inherit;
+    font-size: 0.875rem;
+    opacity: 1;
+}
+
+prm-progress-checkbox .status {
+    font-weight: 600;
 }
 
 /* Change spinners to have BGSU colors. */
