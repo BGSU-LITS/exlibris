@@ -38,7 +38,7 @@ prm-search prm-search-result-list .categories-search {
 }
 
 /* Use background but remove rounded corners on first alert bar. */
-prm-search > prm-alert-bar .bar.alert-bar {
+:is(prm-search, prm-citation-trails-breadcrumbs) > prm-alert-bar .bar.alert-bar {
     background-color: #f5c163;
     border-radius: 0;
 }
@@ -79,12 +79,16 @@ prm-search prm-ngrs-results-button .unskewed-divider {
 }
 
 /* Personalization dialog. */
+md-content:has(> prm-personalization-dialog) {
+    overflow: visible;
+}
+
 prm-search prm-personalization-dialog.flex {
     flex: 1 1 100%;
 }
 
-.__gt-sm prm-search prm-personalization-dialog .personalization-dialog {
-    padding-right: 1rem;
+prm-search prm-personalization-dialog .personalization-dialog {
+    padding-right: 1.5rem;
 }
 
 .__xs prm-search prm-personalization-dialog .personalization-dialog .checkboxes-tree,

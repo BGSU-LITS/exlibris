@@ -361,6 +361,7 @@ body:has(.__gt-xs) #prm-simple-search {
     prm-tags-search-bar
  ) {
     padding: 1.5rem calc(2.625rem + 156px);
+    min-height: 6.75rem;
 }
 
 .__gt-sm prm-search-bar {

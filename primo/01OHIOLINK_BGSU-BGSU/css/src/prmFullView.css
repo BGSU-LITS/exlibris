@@ -156,10 +156,6 @@ prm-alma-viewit .separate-list-items prm-icon.layout-margin > * {
     padding: 0;
 }
 
-:is(prm-opac, alma-htgi-svc) .separate-list-items md-list-item.has-expand .md-button.item-expand-button prm-icon.rotate-180 md-icon {
-    transform: rotate(180deg) translateY(4px);
-}
-
 :is(prm-opac, alma-htgi-svc) md-divider {
     display: none;
 }
