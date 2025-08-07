@@ -1,4 +1,11 @@
 (() => {
+    // Work around searches to Summon that redirect to Library Search.
+    const summon = window.location.hash.match(/(?:%3F|&)q=([^&]+)/);
+
+    if (summon && typeof summon[1] !== 'undefined') {
+        window.location = '/discovery/search?vid=' +
+            window.appConfig.vid + '&query=any,contains,' + summon[1];
+    }
 
     // Automatically perform search when a Search Profile Slot is selected.
     window.appConfig['primo-view']['attributes-map'].tabsRemote = 'true';
@@ -6,7 +13,7 @@
     // Load proactive chat script.
     const script = document.createElement('script');
 
-    script.src = 'https://lib.bgsu.edu/template/2.0.0-b20/libchat.js';
+    script.src = 'https://lib.bgsu.edu/template/2.0.0-b22/libchat.js';
     script.defer = true;
 
     script.addEventListener('load', () => {
@@ -36,7 +43,8 @@
                 const labels = [
                     'citationlinker',
                     'PurchaseRequest',
-                    'PurchaseRequestForm'
+                    'PurchaseRequestForm',
+                    'UserGuide'
                 ];
 
                 const menu = $scope.$parent.$ctrl.mainView;
@@ -221,6 +229,31 @@
         },
     });
 
+    // Add full URL as param to Report a Problem links in Links section.
+    app.component('prmServiceLinksAfter', {
+        controller($element) {
+            this.$onInit = function() {
+                const observe = $element[0].parentElement;
+
+                const observer = new MutationObserver(() => {
+                    const pre = 'https://lib.bgsu.edu/problem/?';
+                    const url = encodeURIComponent(window.location.href);
+                    const els = observe.querySelectorAll('a');
+
+                    for (const el of els) {
+                        el.href = el.href.replace(
+                            pre,
+                            pre + 'url=' + url + '&'
+                        );
+                    }
+                });
+
+                observer.observe(observe, { childList: true, subtree: true });
+            };
+        },
+    });
+
+
     // Prevent clicks of items from toggling details to make selection easier.
     app.component('prmLocationItemAfter', {
         controller($element) {
@@ -233,7 +266,6 @@
                     );
 
                     if (element) {
-
                         element.addEventListener(
                             'click',
                             (event) => event.stopPropagation()
@@ -257,6 +289,43 @@
         },
     });
 
+    // Converts the time loans are due to a 12-hour clock.
+    const fixLoanTime = {
+        controller($element) {
+            this.$onInit = function() {
+                const observe = $element[0].parentElement;
+
+                const observer = new MutationObserver(() => {
+                    observe.querySelectorAll(
+                        '.overdue-line,.overdue-line-overview span'
+                    ).forEach(element => {
+                        element.childNodes.forEach(node => {
+                            if (node.nodeType === Node.TEXT_NODE) {
+                                const find = /, (\d+):(\d+)/;
+                                const matches = node.nodeValue.match(find);
+
+                                if (matches) {
+                                    node.nodeValue = node.nodeValue.replace(
+                                        find,
+                                        ' at ' + (matches[1] % 12 || 12) +
+                                        ':' + matches[2] +
+                                        ' ' + (matches[1] < 12 ? 'AM' : 'PM')
+                                    );
+                                }
+                            }
+                        });
+                    });
+                });
+
+                observer.observe(observe, { childList: true, subtree: true });
+            };
+        },
+    };
+
+    // Convert time on both the loans overview and loan list in Library Account.
+    app.component('prmLoansOverviewAfter', fixLoanTime);
+    app.component('prmLoanAfter', fixLoanTime);
+
     // Add BGSU University Libraries header before Top Bar.
     app.component('prmTopBarBefore', {
         template: `
@@ -275,7 +344,7 @@
                     </svg>
                 </a>
                 <a class="bgsu-header-unit" href="https://www.bgsu.edu/library/">
-                    <div><span>University </span>Libraries</div>
+                    <div>University Libraries</div>
                 </a>
             </div>
         `,
