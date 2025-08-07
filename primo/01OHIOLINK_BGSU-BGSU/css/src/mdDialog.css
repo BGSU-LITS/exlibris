@@ -62,7 +62,6 @@ md-dialog.light-on-dark-dialog md-list md-list-item:hover .md-secondary-containe
     color: #f5c163;
 }
 
-
 /* Hide external link icon for SAML login. */
 md-dialog.light-on-dark-dialog md-list md-list-item.list-login [external-link] {
     display: none;
@@ -75,4 +74,36 @@ md-dialog.light-on-dark-dialog .user-menu-header span {
 
 md-dialog.light-on-dark-dialog .tiny-uppercase-text {
     font-weight: 600;
+}
+
+/* Move and restyle the Display Language selector on mobile devices. */
+md-dialog.light-on-dark-dialog .settings-container {
+    text-transform: none;
+}
+
+md-dialog.light-on-dark-dialog .settings-container .layout-column:has(prm-change-lang) {
+    order: 1;
+}
+
+md-dialog.light-on-dark-dialog .settings-container .layout-column:has(prm-change-lang) .overlay-menu-item {
+    padding: 0 0.75rem;
+}
+
+md-dialog.light-on-dark-dialog .settings-container .layout-column:has(prm-change-lang) prm-icon {
+    order: -1;
+}
+
+md-dialog.light-on-dark-dialog .settings-container .layout-column:has(prm-change-lang) prm-icon md-icon {
+    top: -2px;
+}
+
+md-dialog.light-on-dark-dialog .settings-container prm-change-lang md-select-value {
+    top: 0;
+    font-size: 1rem;
+}
+
+md-dialog.light-on-dark-dialog .settings-container .display-language-label {
+    font-size: 1rem;
+    line-height: 2.25;
+    margin-left: 7px;
 }

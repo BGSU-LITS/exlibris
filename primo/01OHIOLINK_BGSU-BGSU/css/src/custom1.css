@@ -78,3 +78,6 @@
 
 /* speedDialWidget: Navigation that is used on browse pages. */
 @import 'speedDialWidget.css';
+
+/* prm-account: Library Account. */
+@import 'prmAccount.css';

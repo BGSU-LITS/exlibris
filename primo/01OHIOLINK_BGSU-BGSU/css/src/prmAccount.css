@@ -1,0 +1,140 @@
+/* Change width of tiles grid to more consistently fill space. */
+prm-account prm-account-overview .tiles-grid {
+    column-width: 20rem;
+}
+
+/* Hide extra padding from right side of lists on larger screens. */
+prm-account prm-account-overview .flex-gt-md-20:empty {
+    max-width: 0;
+}
+
+/* Improve layout of list items. */
+prm-account md-list-item .md-list-item-with-checkbox md-checkbox {
+    left: .625rem;
+    top: .625rem;
+}
+
+prm-account md-list-item .md-list-item-with-checkbox .item-index,
+prm-account .separate-list-items md-list-item .item-index {
+    left: 0.625rem;
+    opacity: .7;
+    top: .75rem;
+}
+
+prm-account .separate-list-items md-list-item .item-expand-button,
+prm-account .separate-list-items md-list-item .list-item-actions {
+    align-self: flex-start;
+    margin-top: -4px;
+}
+
+prm-account .separate-list-items md-list-item .item-expand-button {
+    border-radius: 50%;
+    height: 40px !important;
+    margin: 4px 6px;
+    min-width: 40px;
+    padding: 0;
+}
+
+prm-account .separate-list-items md-list-item .md-list-item-text {
+    padding: .625rem 2.5rem !important;
+}
+
+.__xs prm-account .separate-list-items md-list-item .md-list-item-text {
+    padding-right: 0 !important;
+}
+
+.__xs prm-account .separate-list-items md-list-item .md-list-item-text > div.list-item-actions {
+    bottom: auto;
+    right: auto;
+}
+
+.__xs prm-account md-tab-content .tab-content-header {
+    padding: 1rem 0 0 0;
+}
+
+prm-account md-tab-content .tab-header-actions .md-button {
+    margin: -5px 6px;
+}
+
+/* Make text of non-renewable loans normal. */
+prm-account prm-loan .not-renewable {
+    font-size: inherit;
+    max-width: 100%;
+    padding: 0;
+    text-transform: none;
+}
+
+/* Remove extra margin from creator of loaned items. */
+prm-account prm-loan .loan-item {
+    margin: 0;
+}
+
+/* Add numbers before each block/message by institution/location. */
+prm-account prm-messages-and-blocks md-list > div > div {
+    counter-reset: blocks-counter;
+}
+
+prm-account prm-messages-and-blocks md-list md-list-item {
+    counter-increment: blocks-counter;
+}
+
+prm-account prm-messages-and-blocks md-list md-list-item .item-index:before {
+    content: counter(blocks-counter);
+}
+
+/* Use full width for Repido progress bar. */
+prm-requests .ngrs-progress-bar {
+    width: 100%;
+}
+
+/* Clean up Personal details tab. */
+prm-account prm-personal-info md-card-header,
+prm-account prm-personal-info md-card .card-divider {
+    display: none;
+}
+
+prm-account prm-personal-info .layout-margin,
+prm-account prm-personal-info .layout-margin > * {
+    margin: 0;
+}
+
+prm-account prm-personal-info .input-containers-group,
+prm-account prm-personal-info .user-info-section {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+prm-account prm-personal-info .input-containers-group:last-child,
+prm-account prm-personal-info .user-info-section:last-child {
+    margin-bottom: 0;
+}
+
+prm-account prm-personal-info .input-containers-group:not(:has(md-input-container)) {
+    display: none;
+}
+
+prm-account prm-personal-info .user-info-section .personal-info-headers {
+    bottom: 100%;
+    left: 3px;
+    opacity: 1;
+    position: absolute;
+    transform-origin: top left;
+}
+
+prm-account prm-personal-info .field-style-disabled .md-input-container-dummy>.md-select-dummy,
+prm-account prm-personal-info .field-style-disabled .personal-details-read-only,
+prm-account prm-personal-info .field-style-disabled input,
+prm-account prm-personal-info .field-style-disabled md-checkbox,
+prm-account prm-personal-info .field-style-disabled md-select {
+    opacity: 1;
+    -webkit-text-fill-color: #000;
+}
+
+prm-account prm-personal-info .md-list-item-text {
+    margin: 0.5rem 0 0 3px;
+}
+
+prm-account prm-personal-info .md-button.button-as-link {
+    padding: 0 3px;
+}
