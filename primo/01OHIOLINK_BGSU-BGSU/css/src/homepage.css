@@ -12,7 +12,7 @@ md-content.main > .flex[section="homepage"] {
 }
 
 md-content.main > .flex[section="homepage"] md-card.default-card {
-    background-color: #4f2c1d;
+    background-color: #4f2c1d !important;
     border-radius: 1.5rem 0;
     color: #fff;
     outline: none;

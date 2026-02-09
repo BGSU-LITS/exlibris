@@ -42,3 +42,7 @@ prm-request .item-available,
 prm-requests .pickup-until {
   color: #008000;
 }
+
+prm-get-it-request .pickup_validation_msg {
+    color: #e02200;
+}

@@ -17,7 +17,12 @@ prm-icon md-icon {
 }
 
 .separate-list-items md-list-item .item-expand-button md-icon {
-    top: -.1rem;
+    top: -0.1rem;
+}
+
+/* Reset styles applied in CampusM. */
+primo-explore {
+    font: inherit;
 }
 
 /* Always show scrollbars on the body so page doesn't jump around. */
@@ -26,11 +31,11 @@ body {
 }
 
 /* Do not disable scrolling if a dialog is not being shown. */
-body:not(.md-dialog-is-showing,:has(md-backdrop)) {
+body:not(.md-dialog-is-showing, :has(md-backdrop)) {
     position: static !important;
 }
 
-body:not(.md-dialog-is-showing,:has(md-backdrop)) .md-scroll-mask {
+body:not(.md-dialog-is-showing, :has(md-backdrop)) .md-scroll-mask {
     display: none;
 }
 
@@ -40,7 +45,10 @@ prm-account .action-list-content,
 prm-favorites-tool-bar .action-list-content prm-action-list,
 prm-search-result-tool-bar .action-list-content prm-action-list,
 prm-search-result-tool-bar .action-list-content prm-export-all {
-    box-shadow: 0 0 0 .65em #fff, 0 0 0 .7em #4f2c1d, 0 2px 15px 5px rgba(0, 0, 0, .2);
+    box-shadow:
+        0 0 0 0.65em #fff,
+        0 0 0 0.7em #4f2c1d,
+        0 2px 15px 5px rgba(0, 0, 0, 0.2);
     margin: 1rem 0 !important;
 }
 
@@ -52,7 +60,7 @@ prm-search-result-tool-bar .action-list-content prm-export-all {
 
 /* Add spaces between required field names in error messages. */
 .help-block .lowercase::before {
-    content: ' ';
+    content: " ";
 }
 
 /* Do not use all-uppercase text. */
@@ -189,7 +197,7 @@ md-toolbar.default-toolbar.is-stuck {
 /* Make external link icon more subtle. */
 [external-link],
 prm-alma-viewit-items ._md-secondary-container {
-    color: rgba(58, 58, 58, .4);
+    color: rgba(58, 58, 58, 0.4);
     margin: 0 0 0 4px;
 }
 

@@ -1,0 +1,57 @@
+.libkey-link-optimizer {
+    display: block !important;
+}
+
+.browzine {
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
+
+.browzine > a {
+    display: flex;
+    line-height: 1.5;
+}
+
+.browzine > a > img {
+    height: 18px;
+    margin: 3px 4px 3px 0 !important;
+    width: 18px;
+}
+
+.browzine > a > md-icon {
+    color: rgba(58, 58, 58, 0.4);
+    height: 24px !important;
+    margin: 0 0 0 4px !important;    
+    min-height: 24px !important;
+    min-width: 12px !important; 
+    width: 12px !important;
+}
+
+.browzine:last-child:not(:has(.browzine-web-link)) {
+    margin-top: 8px !important;
+}
+
+.browzine:last-child:not(:has(.browzine-web-link)) > a {
+    background-color: #1c626d;
+    border-radius: 1.5rem;
+    color: #fff;
+    display: inline-block;
+    line-height: 2.5;
+    margin: 0;
+    padding: 0 1rem;
+    text-decoration: none;
+    transition: 
+        box-shadow .4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        background-color .4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.browzine:last-child:not(:has(.browzine-web-link)) > a:focus,
+.browzine:last-child:not(:has(.browzine-web-link)) > a:hover {
+    background-color: #24818F;
+    color: #fff;
+}
+
+.browzine:last-child:not(:has(.browzine-web-link)) > a > img,
+.browzine:last-child:not(:has(.browzine-web-link)) > a > md-icon {
+    display: none;   
+}

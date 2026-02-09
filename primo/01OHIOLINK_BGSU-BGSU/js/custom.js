@@ -10,6 +10,94 @@
     // Automatically perform search when a Search Profile Slot is selected.
     window.appConfig['primo-view']['attributes-map'].tabsRemote = 'true';
 
+    // Set up Third Iron LibKey/BrowZine integration global and script.
+    window.browzine = {
+        // Primary settings, provided by Third Iron, specific to BGSU.
+        libraryId: '155',
+        apiKey: 'd649bd06-b9f5-41b3-ad66-68f1d84bb7be',
+
+        // Enable enhancement of records from the physical inventory.
+        printRecordsIntegrationEnabled: true,
+
+
+        // Article settings, in decending order of precedence:
+        // 1. Allow links to download PDF files from LibKey.
+        articlePDFDownloadLinkEnabled: true,
+        articlePDFDownloadLinkText: 'Download PDF',
+
+        // 2. Allow links to read articles on LibKey.
+        articleLinkEnabled: true,
+        articleLinkText: 'Read Article',
+
+        // 3. Allow links to retraction watches on articles.
+        articleRetractionWatchEnabled: true,
+        articleRetractionWatchText: 'Retracted Article',
+
+        // 4. Allow links to expressions of concern on articles.
+        articleExpressionOfConcernEnabled: true,
+        articleExpressionOfConcernText: 'Expression of Concern',
+
+        // 5. Allow links to descriptions of problematic journals.
+        problematicJournalEnabled: true,
+        problematicJournalText: 'Problematic Journal',
+
+        // 6. Allow links to request document delivery fulfillment.
+        documentDeliveryFulfillmentEnabled: false,
+        documentDeliveryFulfillmentText: 'Request PDF',
+
+        // Enable both links to download PDF and read articles when available.
+        showFormatChoice: true,
+
+
+        // BrowZine settings:
+        // Allow link to contents on journal results.
+        journalBrowZineWebLinkTextEnabled: true,
+        journalBrowZineWebLinkText: 'View Journal Contents',
+
+        // Allow link to contents on article results.
+        articleBrowZineWebLinkTextEnabled: false,
+        articleBrowZineWebLinkText: 'View Issue Contents',
+
+
+        // Cover image settings:
+        // Enable replacing the items thumbnail with cover image of journal.
+        journalCoverImagesEnabled: true,
+
+
+        // Primo VE settings, only applied if there are no links to LibKey.
+        // When disabled, hides the Primo VE fulltext link (Available Online).
+        showLinkResolverLink: false,
+
+        // Enable hiding the Primo VE quicklinks (Get PDF, Read Online).
+        enableLinkOptimizer: true,
+
+
+        // Unpaywall settings, only applied if there are no links to LibKey.
+        // Email address for Unpaywall API usage, specific to BGSU.
+        unpaywallEmailAddressKey: 'eresources@libanswers.bgsu.edu',
+
+        // Links to show if available, in decending order of precedence:
+        // 1. Allow link to download PDF of article.
+        articlePDFDownloadViaUnpaywallEnabled: true,
+        articlePDFDownloadViaUnpaywallText: 'Download PDF (via Unpaywall)',
+
+        // 2. Allow link to read article online.
+        articleLinkViaUnpaywallEnabled: true,
+        articleLinkViaUnpaywallText: 'Read Article (via Unpaywall)',        
+
+        // 3. Allow link to download PDF of an accepted manuscript.
+        articleAcceptedManuscriptPDFViaUnpaywallEnabled: true,
+        articleAcceptedManuscriptPDFViaUnpaywallText: 'Download PDF (Accepted Manuscript via Unpaywall)',
+
+        // 4. Allow link to read an accepted manuscript online.        
+        articleAcceptedManuscriptArticleLinkViaUnpaywallEnabled: false,
+        articleAcceptedManuscriptArticleLinkViaUnpaywallText: 'Read Article (Accepted Manuscript via Unpaywall)',       
+    };
+
+    browzine.script = document.createElement('script');
+    browzine.script.src = 'https://s3.amazonaws.com/browzine-adapters/primo/browzine-primo-adapter.js';
+    document.head.appendChild(browzine.script);   
+
     // Load proactive chat script.
     const script = document.createElement('script');
 
@@ -30,6 +118,16 @@
     // Create Angular components to customize view.
     const app = angular.module('viewCustom', ['angularLoad']);
 
+    // Add Third Iron LibKey/BrowZine controller and component.
+    app.component('prmSearchResultAvailabilityLineAfter', {
+        bindings: {
+            parentCtrl: '<',
+        },
+        controller: function($scope) {
+            window.browzine.primo.searchResult($scope);
+        },
+    });  
+    
     // Add top bar to standalone login page.
     app.component('prmStandAloneLoginAfter', {
         template: `<prm-topbar></prm-topbar>`
@@ -82,8 +180,7 @@
 
                             const compiled = angular.element($compile(`
                                 <md-menu-item class="menu-item-indented">
-                                    <a class="md-button md-primoExplore-theme md-ink-ripple" role="menuitem"
-                                        href="${item.href}" target="${item.target}">
+                                    <a class="md-button md-primoExplore-theme md-ink-ripple" role="menuitem" href="${item.href}" target="${item.target}">
                                         <span translate="${$scope.$parent.$ctrl.getMenuLabel(item)}"></span>
                                     </a>
                                 </md-menu-item>
@@ -289,6 +386,16 @@
         },
     });
 
+    // Relable the My Home Institution option for Pick-Up Anywhere.
+    app.component('prmGetItRequestAfter', {
+        controller($scope) {
+            this.$onInit = function() {
+                $scope.$parent.$ctrl._pickupMembersField.options[0].label =
+                    'My Home Insitution (BGSU)';
+            };
+        },
+    });
+
     // Converts the time loans are due to a 12-hour clock.
     const fixLoanTime = {
         controller($element) {
@@ -329,7 +436,7 @@
     // Add BGSU University Libraries header before Top Bar.
     app.component('prmTopBarBefore', {
         template: `
-           <div class="bgsu-header">
+            <div class="bgsu-header">
                 <a class="bgsu-header-logo" aria-label="BGSU" href="https://www.bgsu.edu/">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392.4 110.16">
                         <symbol id="bgsu-logo">

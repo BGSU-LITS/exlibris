@@ -8,6 +8,11 @@ prm-account prm-account-overview .flex-gt-md-20:empty {
     max-width: 0;
 }
 
+/* Hide no requests message if there are Rapido requests. */
+prm-account prm-requests-overview md-list:not(:empty) + .message-with-icon:has([translate="nui.overview.norequests"]) {
+    display: none;
+}
+
 /* Improve layout of list items. */
 prm-account md-list-item .md-list-item-with-checkbox md-checkbox {
     left: .625rem;

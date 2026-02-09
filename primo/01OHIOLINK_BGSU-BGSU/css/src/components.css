@@ -530,6 +530,10 @@ md-select[disabled] .md-select-value .md-select-icon {
     top: 16px;
 }
 
+.service-form #form_field_pickupLocation {
+    margin-top: 18px;
+}
+
 /* Tiles used in the account overview. */
 .tiles-grid-tile {
     background-color: #f1ebe5;
