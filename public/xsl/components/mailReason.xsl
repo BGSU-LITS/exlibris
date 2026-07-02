@@ -2,7 +2,17 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template name="toWhomIsConcerned">
         <xsl:for-each select="notification_data">
-            <p>@@dear@@ <xsl:value-of select="receivers/receiver/user/first_name"/>,</p>
+            <p>
+                @@dear@@
+                <xsl:choose>
+                    <xsl:when test="receivers/receiver/user/preferred_first_name!=''">
+                        <xsl:value-of select="receivers/receiver/user/preferred_first_name"/>,
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="receivers/receiver/user/first_name"/>,
+                    </xsl:otherwise>
+                </xsl:choose>
+            </p>
         </xsl:for-each>
     </xsl:template>
     <xsl:template name="sincerely">

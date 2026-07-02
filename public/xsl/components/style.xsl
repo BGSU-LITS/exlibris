@@ -49,10 +49,45 @@
                 margin: 13px 0;
             }
 
+            div.h1,
+            div.h2,
+            div.h3 {
+                font-weight: 600;
+                margin: 6px 0 0 0;
+            }
+
+            div.h1 {
+                font-size: 1.25rem;
+            }
+
+            div.h2 {
+                font-size: 1.125rem;
+            }
+
             table {
                 border-collapse: collapse;
                 mso-table-lspace: 0pt;
                 mso-table-rspace: 0pt;
+            }
+
+            table p {
+                margin: 0 0 13px 0;
+            }
+
+            td,
+            th {
+                padding-right: 1rem;
+                text-align: left;
+            }
+
+            td[align="center"],
+            th[align="center"] {
+                text-align: center;
+            }
+
+            td[align="right"],
+            th[align="right"] {
+                text-align: right;
             }
 
             [x-apple-data-detectors] {
